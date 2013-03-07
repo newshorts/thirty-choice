@@ -1,0 +1,50 @@
+body {
+    background-color: #ccc;
+}
+
+#wrap {
+    position: relative;
+    width: 1024px;
+    
+    border: 1px dotted red;
+}
+
+.video {
+    width: 180px;
+    height: 180px;
+    margin: 18px;
+    position: relative;
+    float: left;
+    z-index: 10;
+}
+
+.choicesContainer {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    background-color: #444;
+    width: 216px;
+    height: 1998px;
+    padding: 10px;
+    z-index: 5;
+    
+/*    display: none;
+    opacity: 0;*/
+}
+
+.choice {
+    width: 180px;
+    height: 180px;
+    background-color: #666;
+    border: 2px dashed #333;
+    margin: 10px 0;
+}
+
+/*
+    UTILITY
+*/
+
+.clear {
+    clear: both;
+}
+
