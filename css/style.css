@@ -9,14 +9,25 @@ body {
     border: 1px dotted red;
 }
 
-.video {
+#videos {
+    position: relative;
+    /*width: 810px;*/
+}
+
+.video,
+.ui-state-highlight {
     width: 180px;
     height: 180px;
     margin: 18px;
-    position: relative;
-    float: left;
+    /*position: relative;*/
+    /*float: left;*/
     z-index: 10;
     list-style-type: none;
+    display: inline-block;
+}
+
+.ui-state-highlight {
+    border: 2px dashed #444;
 }
 
 #choices {

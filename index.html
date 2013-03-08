@@ -33,6 +33,7 @@ and open the template in the editor.
                 <li class="video" data-name="video_14"><a href="#"><img src="images/thumbnails/6.jpg" alt="Video 14" /></a></li>
                 <li class="video" data-name="video_15"><a href="#"><img src="images/thumbnails/7.jpg" alt="Video 15" /></a></li>
                 <li class="video" data-name="video_16"><a href="#"><img src="images/thumbnails/8.jpg" alt="Video 16" /></a></li>
+                <div class="clear"></div>
             </ul>
             
             
@@ -93,7 +94,8 @@ and open the template in the editor.
                     });
                     
                     $('ul.droptrue').sortable({
-                        connectWith: 'ul'
+                        connectWith: 'ul',
+                        placeholder: "ui-state-highlight"
                     });
                     
                     $( "#videos, #choices" ).disableSelection();
