@@ -15,7 +15,7 @@ div {
 }
 
 .videos {
-    width: 700px;
+    width: 800px;
     position: relative;
     float: left;
 }
@@ -39,8 +39,12 @@ div {
 
 .choices {
     width: 300px;
-    position: relative;
-    float: right;
+    max-height: 500px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .choice {
