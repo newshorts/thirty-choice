@@ -64,7 +64,7 @@ var App = Class.extend({
      },
             
     /**
-     * Hand the for being submitted
+     * Handle the form being submitted
      * 
      * @return {void} Nothing
      * */

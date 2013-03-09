@@ -8,42 +8,64 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Video Vote Test</title>
+        <title>GSP 30th Anniversary</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
     <body>
         <div id="wrap">
-            
-            <ul id="videos" class="droptrue">
-                <li class="video" data-name="video_1"><a href="#"><img src="images/thumbnails/1.jpg" alt="Video 1" /></a></li>
-                <li class="video" data-name="video_2"><a href="#"><img src="images/thumbnails/2.jpg" alt="Video 2" /></a></li>
-                <li class="video" data-name="video_3"><a href="#"><img src="images/thumbnails/3.jpg" alt="Video 3" /></a></li>
-                <li class="video" data-name="video_4"><a href="#"><img src="images/thumbnails/4.jpg" alt="Video 4" /></a></li>
-                <li class="video" data-name="video_5"><a href="#"><img src="images/thumbnails/5.jpg" alt="Video 5" /></a></li>
-                <li class="video" data-name="video_6"><a href="#"><img src="images/thumbnails/6.jpg" alt="Video 6" /></a></li>
-                <li class="video" data-name="video_7"><a href="#"><img src="images/thumbnails/7.jpg" alt="Video 7" /></a></li>
-                <li class="video" data-name="video_8"><a href="#"><img src="images/thumbnails/8.jpg" alt="Video 8" /></a></li>
-
-                <li class="video" data-name="video_9"><a href="#"><img src="images/thumbnails/1.jpg" alt="Video 9" /></a></li>
-                <li class="video" data-name="video_10"><a href="#"><img src="images/thumbnails/2.jpg" alt="Video 10" /></a></li>
-                <li class="video" data-name="video_11"><a href="#"><img src="images/thumbnails/3.jpg" alt="Video 11" /></a></li>
-                <li class="video" data-name="video_12"><a href="#"><img src="images/thumbnails/4.jpg" alt="Video 12" /></a></li>
-                <li class="video" data-name="video_13"><a href="#"><img src="images/thumbnails/5.jpg" alt="Video 13" /></a></li>
-                <li class="video" data-name="video_14"><a href="#"><img src="images/thumbnails/6.jpg" alt="Video 14" /></a></li>
-                <li class="video" data-name="video_15"><a href="#"><img src="images/thumbnails/7.jpg" alt="Video 15" /></a></li>
-                <li class="video" data-name="video_16"><a href="#"><img src="images/thumbnails/8.jpg" alt="Video 16" /></a></li>
+            <div class="videos">
+                <ul class="video">
+                    <li data-><img src="images/thumbnails/1.jpg" alt="image" /></li>
+                </ul>
+                <ul class="video">
+                    <li><img src="images/thumbnails/2.jpg" alt="image" /></li>
+                </ul>
+                <ul class="video">
+                    <li><img src="images/thumbnails/3.jpg" alt="image" /></li>
+                </ul>
+                <ul class="video">
+                    <li><img src="images/thumbnails/4.jpg" alt="image" /></li>
+                </ul>
+                <ul class="video">
+                    <li><img src="images/thumbnails/5.jpg" alt="image" /></li>
+                </ul>
+                <ul class="video">
+                    <li><img src="images/thumbnails/6.jpg" alt="image" /></li>
+                </ul>
+                <ul class="video">
+                    <li><img src="images/thumbnails/7.jpg" alt="image" /></li>
+                </ul>
+                <ul class="video">
+                    <li><img src="images/thumbnails/8.jpg" alt="image" /></li>
+                </ul>
+                <ul class="video">
+                    <li><img src="images/thumbnails/1.jpg" alt="image" /></li>
+                </ul>
+                <ul class="video">
+                    <li><img src="images/thumbnails/2.jpg" alt="image" /></li>
+                </ul>
                 <div class="clear"></div>
-            </ul>
-            
-            
-
-            <ul id="choices" class="droptrue"></ul>
-            
+            </div>
+            <div class="choices">
+                <ul class="choice choice1">
+                    <li></li>
+                </ul>
+                <ul class="choice choice1">
+                    <li></li>
+                </ul>
+                <ul class="choice choice1">
+                    <li></li>
+                </ul>
+                <ul class="choice choice1">
+                    <li></li>
+                </ul>
+                <ul class="choice choice1">
+                    <li></li>
+                </ul>
+            </div>
             <div class="clear"></div>
-            
-            <button class="submit">Submit</button>
-            <a href="#" class="emailLink"></a>
         </div>
         <div id="login">
             <form id="loginForm" action="POST">
@@ -93,12 +115,15 @@ and open the template in the editor.
                         }
                     });
                     
-                    $('ul.droptrue').sortable({
-                        connectWith: 'ul',
+                    $('.choice').sortable({
+                        connectWith: '.video, .choice',
                         placeholder: "ui-state-highlight"
                     });
                     
-                    $( "#videos, #choices" ).disableSelection();
+                    $('.video').sortable({
+                        connectWith: '.choice',
+                        placeholder: "ui-state-highlight"
+                    });
                     
                 });
             })(jQuery);
