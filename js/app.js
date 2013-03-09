@@ -45,7 +45,7 @@ var App = Class.extend({
          str += '%0A%0AEmail%3A%20' + arr.email;
          str += '%0A%0APosition%3A%20' + arr.position;
          str += '%0A%0AName%3A%20' + arr.name;
-         
+         // this is typeing on the new keyboard, pretty sweet!!!
          var choicesCount = arr.choices.length;
          
          for(var i = 0; i < choicesCount; i++) {
