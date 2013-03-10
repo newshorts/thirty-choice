@@ -1,18 +1,110 @@
-ul, li {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
+/*
+    DEBUG
+*/
 
 div {
     border: 1px dotted red;
 }
+
+/*
+    PAGE FLOW
+*/
 
 #wrap {
     width: 1024px;
     position: relative;
     margin: 0 auto;
 }
+
+.videos {
+    width: 700px;
+    position: relative;
+    z-index: 20;
+}
+
+.videoContainer {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    margin: 10px;
+    float: left;
+}
+
+.empty {
+    border: 2px dashed #666;
+    background-color: #888;
+}
+
+.video {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    top:0;
+    left: 0;
+}
+
+.videoThumb {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    opacity: 0;
+}
+
+.videoTile {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+.videoTile,
+.videoThumb {
+    transition: top 0.2s linear, left 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear;
+    -moz-transition: top 0.2s linear, left 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear;
+    -webkit-transition: top 0.2s linear, left 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear;
+    -o-transition: top 0.2s linear, left 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear;
+}
+
+.choices {
+    position: fixed;
+    display: block;
+    width: 300px;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+}
+
+.choice {
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 75px;
+    background-color: #fbfbfb;
+    margin: 15px 0;
+
+}
+
+.choiceDrop {
+    position: relative;
+    float: left;
+    width: 60px;
+    height: 60px;
+    border: 2px dashed #777;
+    background-color: #ccc;
+}
+
+.choice span {
+    display: inline-block;
+    float: left;
+}
+
+/*
+    UTILITIES
+*/
 
 .clear {
     clear: both;

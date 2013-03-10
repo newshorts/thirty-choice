@@ -13,91 +13,7 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <style>
-            .videos {
-                width: 700px;
-                position: relative;
-                z-index: 20;
-            }
             
-            .videoContainer {
-                width: 160px;
-                height: 160px;
-                position: relative;
-                margin: 10px;
-                float: left;
-            }
-            
-            .empty {
-                border: 2px dashed #666;
-                background-color: #888;
-            }
-            
-            .video {
-                width: 160px;
-                height: 160px;
-                position: relative;
-                top:0;
-                left: 0;
-            }
-            
-            .videoThumb {
-                position: absolute;
-                width: 160px;
-                height: 160px;
-                top:0;
-                left:0;
-                opacity: 0;
-            }
-            
-            .videoTile {
-                position: absolute;
-                width: 160px;
-                height: 160px;
-                top: 0;
-                left: 0;
-                opacity: 1;
-            }
-            
-            .videoTile,
-            .videoThumb {
-                transition: top 0.2s linear, left 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear;
-                -moz-transition: top 0.2s linear, left 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear;
-                -webkit-transition: top 0.2s linear, left 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear;
-                -o-transition: top 0.2s linear, left 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear;
-            }
-            
-            .choices {
-                position: fixed;
-                display: block;
-                width: 300px;
-                top: 15px;
-                right: 15px;
-                z-index: 10;
-            }
-            
-            .choice {
-                position: relative;
-                display: block;
-                width: 300px;
-                height: 75px;
-                background-color: #fbfbfb;
-                margin: 15px 0;
-                
-            }
-            
-            .choiceDrop {
-                position: relative;
-                float: left;
-                width: 60px;
-                height: 60px;
-                border: 2px dashed #777;
-                background-color: #ccc;
-            }
-            
-            .choice span {
-                display: inline-block;
-                float: left;
-            }
         </style>
     </head>
     <body>
@@ -110,12 +26,44 @@ and open the template in the editor.
                         <img class="videoTile" src="images/1.jpg" />
                     </div>
                 </div>
+                <div class="videoContainer">
+                    <div class="video">
+                        <img class="videoThumb" src="images/thumbs/1.jpg" />
+                        <img class="videoTile" src="images/2.jpg" />
+                    </div>
+                </div>
+                <div class="videoContainer">
+                    <div class="video">
+                        <img class="videoThumb" src="images/thumbs/1.jpg" />
+                        <img class="videoTile" src="images/3.jpg" />
+                    </div>
+                </div>
                 <div class="clear"></div>
             </div>
             <ul class="choices">
                 <li class="choice">
                     <div class="choiceDrop"></div>
                     <span>1.</span>
+                    <div class="choiceTitle"></div>
+                </li>
+                <li class="choice">
+                    <div class="choiceDrop"></div>
+                    <span>2.</span>
+                    <div class="choiceTitle"></div>
+                </li>
+                <li class="choice">
+                    <div class="choiceDrop"></div>
+                    <span>3.</span>
+                    <div class="choiceTitle"></div>
+                </li>
+                <li class="choice">
+                    <div class="choiceDrop"></div>
+                    <span>4.</span>
+                    <div class="choiceTitle"></div>
+                </li>
+                <li class="choice">
+                    <div class="choiceDrop"></div>
+                    <span>5.</span>
                     <div class="choiceTitle"></div>
                 </li>
             </ul>
@@ -129,61 +77,83 @@ and open the template in the editor.
             (function($) {
                 $(window).load(function() {
                     
+                    // events
                     $('.video').on('dragstart', function(evt, ui) {
                         
                         var $this = $(this);
                         
-                        var $parent = $this.parent('.videoContainer');
-                        
-                        $parent.addClass('empty');
-                        
-                        var tile = $this.find('.videoTile'),
-                            thumb = $this.find('.videoThumb');
+                        if(!ui.helper.data('dropped')) {
                             
-                        tile.css({
-                            width: '60px',
-                            height: '60px',
-                            top: evt.offsetY - 30 + 'px',
-                            left: evt.offsetX - 30 + 'px',
-                            opacity: 0
-                        });
-                        
-                        thumb.css({
-                            width: '60px',
-                            height: '60px',
-                            top: evt.offsetY - 30 + 'px',
-                            left: evt.offsetX - 30 + 'px',
-                            opacity: 1
-                        });
+                            var $parent = $this.parent('.videoContainer');
+
+                            $parent.addClass('empty');
+
+                            var tile = $this.find('.videoTile'),
+                                thumb = $this.find('.videoThumb');
+                                
+                            tile.css({
+                                width: '60px',
+                                height: '60px',
+                                top: evt.offsetY - 30 + 'px',
+                                left: evt.offsetX - 30 + 'px',
+                                opacity: 0
+                            });
+
+                            thumb.css({
+                                width: '60px',
+                                height: '60px',
+                                top: evt.offsetY - 30 + 'px',
+                                left: evt.offsetX - 30 + 'px',
+                                opacity: 1
+                            });
+                            // TODO figure out how to resize the element when you start dragging
+                            console.dir(evt)
+                            $this.css({
+                                width: '60px',
+                                height: '60px',
+                                top: (evt.pageY + (160 - evt.offsetY)) - 30 + 'px',
+                                left: (evt.pageX + (160 - evt.offsetX)) - 30 + 'px'
+                            });
+                        }
                     });
                     
                     $('.video').on('dragstop', function(evt, ui) {
+                        
                         var $this = $(this);
                         
-                        var $parent = $this.parent('.videoContainer');
-                        
-                        $parent.removeClass('empty');
-                        
-                        var tile = $this.find('.videoTile'),
-                            thumb = $this.find('.videoThumb');
+                        if(!ui.helper.data('dropped')) {
                             
-                        tile.css({
-                            width: '160px',
-                            height: '160px',
-                            top: '0px',
-                            left: '0px',
-                            opacity: 1
-                        });
-                        
-                        thumb.css({
-                            width: '160px',
-                            height: '160px',
-                            top: '0px',
-                            left: '0px',
-                            opacity: 0
-                        });
+                            var $parent = $this.parent('.videoContainer');
+
+                            $parent.removeClass('empty');
+
+                            var tile = $this.find('.videoTile'),
+                                thumb = $this.find('.videoThumb');
+                                
+                            tile.css({
+                                width: '160px',
+                                height: '160px',
+                                top: '0px',
+                                left: '0px',
+                                opacity: 1
+                            });
+
+                            thumb.css({
+                                width: '160px',
+                                height: '160px',
+                                top: '0px',
+                                left: '0px',
+                                opacity: 0
+                            });
+                            
+                            $this.css({
+                                width: '160px',
+                                height: '160px'
+                            });
+                        }
                     });
                     
+                    // set elements in ui
                     $('.video').draggable({
                         revert: function(evt, ui) {
                             $(this).data('uiDraggable').originalPosition = {
@@ -193,22 +163,19 @@ and open the template in the editor.
                             return !evt;
                         },
                         drag: function(evt, ui) {
-                            
+                            // ??
                         }
                     });
                     
                     $( ".choiceDrop" ).droppable({
                         drop: function( event, ui ) {
-                            $( this )
-                            .addClass( "ui-state-highlight" )
-                            .html( "Dropped!" );
+                            ui.draggable.data('dropped', true);
                         },
                         out: function(evt, ui) {
-                            $( this )
-                            .removeClass( "ui-state-highlight" )
-                            .html( "" );
+                            ui.draggable.data('dropped', false);
                         }
                     });
+                    
                 });
             })(jQuery);
         </script>
