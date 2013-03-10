@@ -147,6 +147,8 @@ and open the template in the editor.
                     
                     // set elements in ui
                     $('.video').draggable({
+                        
+                        // this is a neat little trick to get anything other than a drop to revert
                         revert: function(evt, ui) {
                             $(this).data('uiDraggable').originalPosition = {
                                 top: 0,
@@ -170,23 +172,27 @@ and open the template in the editor.
                     $( ".choiceDrop" ).droppable({
                         drop: function( evt, ui ) {
                             ui.draggable.data('dropped', true);
-                            
                             ui.draggable.data('dropElem', this);
                             
-//                            var elem = ui.draggable.detach();
-//                            
-//                            elem.css({
-//                                top: 0,
-//                                left: 0
-//                            });
-//                            
-//                            $(this).html(elem);
+                            $(this).droppable('option', 'accept', ui.draggable);
                         },
                         out: function(evt, ui) {
                             ui.draggable.data('dropped', false);
                             ui.draggable.data('dropElem', null);
+                            
+                            $(this).droppable('option', 'accept', '.video');
                         }
                     });
+                    
+                    /**
+                     *  TODO In order to make this list sortable I'm gonna have
+                     *  to figure out how to .detach() the draggable from the 
+                     *  container, insert it into the choiceDrop and then if it
+                     *  gets remove, figure out how to get it to revert to its
+                     *  original container...the last part is the part i'm 
+                     *  having trouble with.
+                     */
+                    $('.choices').sortable();
                     
                 });
             })(jQuery);

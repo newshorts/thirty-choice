@@ -28,6 +28,13 @@ div {
     position: relative;
     margin: 10px;
     float: left;
+    
+    border: 2px solid white;
+    background-color: #ccc;
+}
+
+.videoContainer:hover {
+    border: 2px solid #ccc;
 }
 
 .empty {
