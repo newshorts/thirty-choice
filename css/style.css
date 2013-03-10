@@ -42,12 +42,14 @@ body {
 
 #wrap {
     width: 1024px;
-    min-height: 768px;
+    min-height: 881px;
     position: relative;
     padding: 0;
     margin: 0 auto;
     background-color: white;
     border: 1px solid #737375;
+    
+    z-index: 20;
     
     -moz-box-shadow:    0px 0px 60px 2px #000;
     -webkit-box-shadow: 0px 0px 60px 2px #000;
@@ -113,6 +115,7 @@ section form {
 
 form h2 {
     font-size: 16px;
+    line-height: 17px;
 }
 
 form input {
@@ -123,4 +126,18 @@ form input {
     padding: 4px 10px;
     background-color: white;
     color: #9b9da1;
+    margin: 5px 0;
+}
+
+#name {
+    margin-top: 20px;
+}
+
+#submit {
+    width: 80px;
+    height: 35px;
+    background-color: #ccc;
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
 }

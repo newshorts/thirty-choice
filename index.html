@@ -44,14 +44,14 @@ and open the template in the editor.
                         <input type="email" name="email" id="email" placeholder="Email..." value="" /><br>
                         
                         <input type="submit" name="submit" id="submit" value="Start Voting" />
+                        
+                        <div class="clear"></div>
                     </form>
                 </section>
             </div>
-            
-            
-            
-        </div>
+        </div><!-- end wrap -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/jquery.validate.js"></script>
         <script src="js/cufon.js"></script>
         <script src="js/berthold.js"></script>
         <script src="js/class.js"></script>
@@ -63,21 +63,21 @@ and open the template in the editor.
                     var c = new Class(),
                         app = new App();
                     
-//                    $('#loginForm').validate({
-//                        rules: {
-//                            name: "required",
-//                            position: "required",
-//                            email: {
-//                                required: true,
-//                                email: true
-//                            }
-//                        },
-//                        messages: {
-//                            name: "Please enter your name",
-//                            position: "Please enter your current position",
-//                            email: "Please enter a valid email address"
-//                        }
-//                    });
+                    $('#loginForm').validate({
+                        rules: {
+                            name: "required",
+                            position: "required",
+                            email: {
+                                required: true,
+                                email: true
+                            }
+                        },
+                        messages: {
+                            name: "Please enter your name",
+                            position: "Please enter your current position",
+                            email: "Please enter a valid email address"
+                        }
+                    });
                     
                     Cufon.replace('h1, p, h2');
                 });
