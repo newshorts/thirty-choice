@@ -1,123 +1,126 @@
-/*
-    DEBUG
+/* 
+    Document   : style
+    Created on : Mar 10, 2013, 1:05:00 PM
+    Author     : mike_newell
+    Description:
+        Purpose of the stylesheet follows.
 */
 
-div {
-    border: 1px dotted red;
+
+
+root { 
+    display: block;
 }
 
-/*
-    PAGE FLOW
-*/
+html, body, #wrap {
+    height: 100%;
+}
+
+body {
+    font-family: arial, sans-serif;
+    color: #9b9da1;
+
+    /* fallback 58595b 3b3c3d */
+    /*background-color: #3b3c3d;*/
+    /* chrome 2+, safari 4+; multiple color stops */
+    /*background-image:-webkit-gradient(linear, left bottom, left top, color-stop(0.25, #58595b), color-stop(0.75, #3b3c3d));*/
+    /* chrome 10+, safari 5.1+ */
+    background-image: -webkit-linear-gradient(left, #58595b, #3d3d3d 25%, #3d3d3d 75%, #58595b);
+    /* firefox; multiple color stops */
+    background-image: -moz-linear-gradient(left,#58595b, #3d3d3d, #58595b);
+    /* ie 6+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#58595b', endColorstr='#3d3d3d');
+    /* ie8 + */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#58595b', endColorstr='#3d3d3d')";
+    /* ie10 */
+    background-image: -ms-linear-gradient(left, #58595b, #3d3d3d, #58595b);
+    /* opera 11.1 */
+    background-image: -o-linear-gradient(left, #58595b, #3d3d3d, #58595b);
+    /* The "standard" */
+    background-image: linear-gradient(left, #58595b, #3d3d3d, #58595b);
+}
 
 #wrap {
     width: 1024px;
+    min-height: 768px;
     position: relative;
+    padding: 0;
     margin: 0 auto;
-}
-
-.videos {
-    width: 700px;
-    position: relative;
-    z-index: 20;
-}
-
-.videoContainer {
-    width: 160px;
-    height: 160px;
-    position: relative;
-    margin: 10px;
-    float: left;
+    background-color: white;
+    border: 1px solid #737375;
     
-    border: 2px solid white;
-    background-color: #ccc;
+    -moz-box-shadow:    0px 0px 60px 2px #000;
+    -webkit-box-shadow: 0px 0px 60px 2px #000;
+    box-shadow:         0px 0px 60px 2px #000;
+    
+    overflow: hidden;
 }
 
-.videoContainer:hover {
-    border: 2px solid #ccc;
+.redBar {
+    width: 100%;
+    background-color: #ed1c24;
+    height: 12px;
+    border-bottom: 1px solid #f4777c;
+    margin-top: 26px;
 }
 
-.empty {
-    border: 2px dashed #666;
-    background-color: #888;
+#container {
+    width: 636px;
+    padding: 0 108px;
 }
 
-.video {
+#wrap header img {
+    
+}
+
+#wrap header hr {
+    width: 852px;
+    margin-left: -54px;
+}
+
+#wrap header .nav {
+    width: 100%;
+    height: 38px;
+    background: url(../images/nav-bg.png) 0 0 scroll no-repeat;
+}
+
+section {
+    padding-top: 45px;
+    margin: 0 1px;
+}
+
+section header h1 {
+    font-size: 24px;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+section article {
+    margin-top: 20px;
+}
+
+section article p {
+    font-size: 12px;
+    margin: 10px 0;
+    line-height: 13px;
+}
+
+section form {
+    width: 280px;
+    padding: 20px;
+    background-color: #efeded;
+}
+
+form h2 {
+    font-size: 16px;
+}
+
+form input {
+    font-size: 12px;
     width: 160px;
-    height: 160px;
-    position: relative;
-    top:0;
-    left: 0;
-}
-
-.videoThumb {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top:0;
-    left:0;
-    opacity: 0;
-}
-
-.videoTile {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 1;
-}
-
-.videoTile,
-.videoThumb {
-    transition: top 0.2s linear, left 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear;
-    -moz-transition: top 0.2s linear, left 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear;
-    -webkit-transition: top 0.2s linear, left 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear;
-    -o-transition: top 0.2s linear, left 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear;
-}
-
-.choices {
-    position: fixed;
-    display: block;
-    width: 300px;
-    top: 15px;
-    right: 15px;
-    z-index: 10;
-}
-
-.choice {
-    position: relative;
-    display: block;
-    width: 300px;
-    height: 75px;
-    background-color: #fbfbfb;
-    margin: 15px 0;
-
-}
-
-.choiceDrop {
-    position: relative;
-    float: left;
-    width: 60px;
-    height: 60px;
-    border: 2px dashed #777;
-    background-color: #ccc;
-}
-/*
-.choiceDrop .video {
-    top: 0;
-    left: 0;
-}*/
-
-.choice span {
-    display: inline-block;
-    float: left;
-}
-
-/*
-    UTILITIES
-*/
-
-.clear {
-    clear: both;
+    height: 20px;
+    border: 1px solid #e1e1e1;
+    padding: 4px 10px;
+    background-color: white;
+    color: #9b9da1;
 }

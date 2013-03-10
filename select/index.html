@@ -1,0 +1,201 @@
+<!-- 
+    Author: Mike Newell © 2012
+-->
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GSP 30th Anniversary</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/select/style.css" />
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <header></header>
+        <div id="wrap">
+            <div class="videos">
+                <div class="videoContainer">
+                    <div class="video">
+                        <img class="videoThumb" src="images/thumbs/2.jpg" />
+                        <img class="videoTile" src="images/1.jpg" />
+                    </div>
+                </div>
+                <div class="videoContainer">
+                    <div class="video">
+                        <img class="videoThumb" src="images/thumbs/1.jpg" />
+                        <img class="videoTile" src="images/2.jpg" />
+                    </div>
+                </div>
+                <div class="videoContainer">
+                    <div class="video">
+                        <img class="videoThumb" src="images/thumbs/1.jpg" />
+                        <img class="videoTile" src="images/3.jpg" />
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <ul class="choices">
+                <li class="choice">
+                    <div class="choiceDrop"></div>
+                    <span>1.</span>
+                    <div class="choiceTitle"></div>
+                </li>
+                <li class="choice">
+                    <div class="choiceDrop"></div>
+                    <span>2.</span>
+                    <div class="choiceTitle"></div>
+                </li>
+                <li class="choice">
+                    <div class="choiceDrop"></div>
+                    <span>3.</span>
+                    <div class="choiceTitle"></div>
+                </li>
+                <li class="choice">
+                    <div class="choiceDrop"></div>
+                    <span>4.</span>
+                    <div class="choiceTitle"></div>
+                </li>
+                <li class="choice">
+                    <div class="choiceDrop"></div>
+                    <span>5.</span>
+                    <div class="choiceTitle"></div>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <footer></footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+        <script src="js/jquery.validate.js"></script>
+        <script>
+            (function($) {
+                $(window).load(function() {
+                    
+                    // events
+                    $('.video').on('dragstart', function(evt, ui) {
+                        
+                        var $this = $(this);
+                        
+                        if(!ui.helper.data('dropped')) {
+                            
+                            var $parent = $this.parent('.videoContainer');
+
+                            $parent.addClass('empty');
+
+                            var tile = $this.find('.videoTile'),
+                                thumb = $this.find('.videoThumb');
+                                
+                            tile.css({
+                                width: '60px',
+                                height: '60px',
+                                opacity: 0
+                            });
+
+                            thumb.css({
+                                width: '60px',
+                                height: '60px',
+                                opacity: 1
+                            });
+                            
+                            $this.css({
+                                width: '60px',
+                                height: '60px',
+                            });
+                        }
+                    });
+                    
+                    $('.video').on('dragstop', function(evt, ui) {
+                        
+                        var $this = $(this);
+                        
+                        if(!ui.helper.data('dropped')) {
+                            
+                            var $parent = $this.parent('.videoContainer');
+
+                            $parent.removeClass('empty');
+
+                            var tile = $this.find('.videoTile'),
+                                thumb = $this.find('.videoThumb');
+                                
+                            tile.css({
+                                width: '160px',
+                                height: '160px',
+                                opacity: 1
+                            });
+
+                            thumb.css({
+                                width: '160px',
+                                height: '160px',
+                                opacity: 0
+                            });
+                            
+                            $this.css({
+                                width: '160px',
+                                height: '160px'
+                            });
+                        } else {
+                            var o = $(ui.helper.data('dropElem')).offset();
+                            $(this).offset(o);
+                        }
+                    });
+                    
+                    // set elements in ui
+                    $('.video').draggable({
+                        
+                        // this is a neat little trick to get anything other than a drop to revert
+                        revert: function(evt, ui) {
+                            $(this).data('uiDraggable').originalPosition = {
+                                top: 0,
+                                left: 0,
+                            };
+                            return !evt;
+                        },
+                        drag: function(evt, ui) {
+                            $(this).css({
+                                'z-index': 30
+                            });
+                        },
+                        cursorAt: {
+                            left: 30,
+                            top: 30
+                        },
+                        snap: '.choiceDrop',
+                        snapMode: 'inner'
+                    });
+                    
+                    $( ".choiceDrop" ).droppable({
+                        drop: function( evt, ui ) {
+                            ui.draggable.data('dropped', true);
+                            ui.draggable.data('dropElem', this);
+                            
+                            $(this).droppable('option', 'accept', ui.draggable);
+                        },
+                        out: function(evt, ui) {
+                            ui.draggable.data('dropped', false);
+                            ui.draggable.data('dropElem', null);
+                            
+                            $(this).droppable('option', 'accept', '.video');
+                        }
+                    });
+                    
+                    /**
+                     *  TODO In order to make this list sortable I'm gonna have
+                     *  to figure out how to .detach() the draggable from the 
+                     *  container, insert it into the choiceDrop and then if it
+                     *  gets remove, figure out how to get it to revert to its
+                     *  original container...the last part is the part i'm 
+                     *  having trouble with.
+                     */
+                    $('.choices').sortable();
+                    
+                });
+            })(jQuery);
+        </script>
+    </body>
+</html>
