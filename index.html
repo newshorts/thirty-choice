@@ -94,32 +94,19 @@ and open the template in the editor.
                             tile.css({
                                 width: '60px',
                                 height: '60px',
-//                                top: evt.offsetY - 30 + 'px',
-//                                left: evt.offsetX - 30 + 'px',
                                 opacity: 0
                             });
 
                             thumb.css({
                                 width: '60px',
                                 height: '60px',
-//                                top: evt.offsetY - 30 + 'px',
-//                                left: evt.offsetX - 30 + 'px',
                                 opacity: 1
                             });
-                            
-                            // it looks like you can't control initial positioning
-//                            console.dir(evt)
                             
                             $this.css({
                                 width: '60px',
                                 height: '60px',
                             });
-//                            $this.css({
-//                                width: '60px',
-//                                height: '60px',
-////                                top: '300px',
-////                                left: '300px'
-//                            });
                         }
                     });
                     
@@ -139,16 +126,12 @@ and open the template in the editor.
                             tile.css({
                                 width: '160px',
                                 height: '160px',
-//                                top: '0px',
-//                                left: '0px',
                                 opacity: 1
                             });
 
                             thumb.css({
                                 width: '160px',
                                 height: '160px',
-//                                top: '0px',
-//                                left: '0px',
                                 opacity: 0
                             });
                             
@@ -156,24 +139,11 @@ and open the template in the editor.
                                 width: '160px',
                                 height: '160px'
                             });
+                        } else {
+                            var o = $(ui.helper.data('dropElem')).offset();
+                            $(this).offset(o);
                         }
                     });
-                    
-                    // TODO figure out how to resize the element when you start dragging
-//                    function position(evt, ui) {
-//                        console.dir(ui.helper.data('uiDraggable').positionAbs)
-//                        
-//                        
-//                        ui.helper.data('uiDraggable').positionAbs.left = 300;
-//                        
-////                        $( this ).position({
-////                            my: 'right top',
-////                            at: 'bottom left',
-////                            of: evt.pageX
-////                        });
-////                        $(this).data('draggable').offset().click.top -=x
-//                    }
-                    
                     
                     // set elements in ui
                     $('.video').draggable({
@@ -185,31 +155,36 @@ and open the template in the editor.
                             return !evt;
                         },
                         drag: function(evt, ui) {
-                            // ??
+                            $(this).css({
+                                'z-index': 30
+                            });
                         },
                         cursorAt: {
                             left: 30,
                             top: 30
-                        }
-//                        drag: function(evt, ui) {
-//                            
-//                            var pos = $(this).position({
-//                                my: "left+1300 bottom+1300",
-//                                of: evt,
-//                                collision: "fit"
-//                            });
-//                            
-//                            return pos;
-//                        },
-//                        refreshPositions: true
+                        },
+                        snap: '.choiceDrop',
+                        snapMode: 'inner'
                     });
                     
                     $( ".choiceDrop" ).droppable({
-                        drop: function( event, ui ) {
+                        drop: function( evt, ui ) {
                             ui.draggable.data('dropped', true);
+                            
+                            ui.draggable.data('dropElem', this);
+                            
+//                            var elem = ui.draggable.detach();
+//                            
+//                            elem.css({
+//                                top: 0,
+//                                left: 0
+//                            });
+//                            
+//                            $(this).html(elem);
                         },
                         out: function(evt, ui) {
                             ui.draggable.data('dropped', false);
+                            ui.draggable.data('dropElem', null);
                         }
                     });
                     
