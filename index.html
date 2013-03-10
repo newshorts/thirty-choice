@@ -12,163 +12,203 @@ and open the template in the editor.
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <style>
+            .videos {
+                width: 700px;
+                position: relative;
+                z-index: 20;
+            }
+            
+            .videoContainer {
+                width: 160px;
+                height: 160px;
+                position: relative;
+                margin: 10px;
+                float: left;
+            }
+            
+            .empty {
+                border: 2px dashed #666;
+                background-color: #888;
+            }
+            
+            .video {
+                width: 160px;
+                height: 160px;
+                position: relative;
+                top:0;
+                left: 0;
+            }
+            
+            .videoThumb {
+                position: absolute;
+                width: 160px;
+                height: 160px;
+                top:0;
+                left:0;
+                opacity: 0;
+            }
+            
+            .videoTile {
+                position: absolute;
+                width: 160px;
+                height: 160px;
+                top: 0;
+                left: 0;
+                opacity: 1;
+            }
+            
+            .videoTile,
+            .videoThumb {
+                transition: top 0.2s linear, left 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear;
+                -moz-transition: top 0.2s linear, left 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear;
+                -webkit-transition: top 0.2s linear, left 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear;
+                -o-transition: top 0.2s linear, left 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear;
+            }
+            
+            .choices {
+                position: fixed;
+                display: block;
+                width: 300px;
+                top: 15px;
+                right: 15px;
+                z-index: 10;
+            }
+            
+            .choice {
+                position: relative;
+                display: block;
+                width: 300px;
+                height: 75px;
+                background-color: #fbfbfb;
+                margin: 15px 0;
+                
+            }
+            
+            .choiceDrop {
+                position: relative;
+                float: left;
+                width: 60px;
+                height: 60px;
+                border: 2px dashed #777;
+                background-color: #ccc;
+            }
+            
+            .choice span {
+                display: inline-block;
+                float: left;
+            }
+        </style>
     </head>
     <body>
         <header></header>
         <div id="wrap">
             <div class="videos">
-                <ul class="video">
-                    <li>
-                        <img src="images/thumbnails/1.jpg" alt="Project Title A" />
-                    </li>
-                </ul>
-                <ul class="video">
-                    <li><img src="images/thumbnails/2.jpg" alt="Project Title B" /></li>
-                </ul>
-                <ul class="video">
-                    <li><img src="images/thumbnails/3.jpg" alt="Project Title C" /></li>
-                </ul>
-                <ul class="video">
-                    <li><img src="images/thumbnails/4.jpg" alt="Project Title D" /></li>
-                </ul>
-                <ul class="video">
-                    <li><img src="images/thumbnails/5.jpg" alt="Project Title E" /></li>
-                </ul>
-                <ul class="video">
-                    <li><img src="images/thumbnails/6.jpg" alt="Project Title F" /></li>
-                </ul>
-                <ul class="video">
-                    <li><img src="images/thumbnails/7.jpg" alt="Project Title G" /></li>
-                </ul>
-                <ul class="video">
-                    <li><img src="images/thumbnails/8.jpg" alt="Project Title H" /></li>
-                </ul>
-                <ul class="video">
-                    <li><img src="images/thumbnails/1.jpg" alt="Project Title A" /></li>
-                </ul>
-                <ul class="video">
-                    <li><img src="images/thumbnails/2.jpg" alt="Project Title B" /></li>
-                </ul>
+                <div class="videoContainer">
+                    <div class="video">
+                        <img class="videoThumb" src="images/thumbs/2.jpg" />
+                        <img class="videoTile" src="images/1.jpg" />
+                    </div>
+                </div>
                 <div class="clear"></div>
             </div>
-            <div class="choices">
-                <ul class="choice choice1">
-                    <li></li>
-                </ul>
-                <ul class="choice choice1">
-                    <li></li>
-                </ul>
-                <ul class="choice choice1">
-                    <li></li>
-                </ul>
-                <ul class="choice choice1">
-                    <li></li>
-                </ul>
-                <ul class="choice choice1">
-                    <li></li>
-                </ul>
-                <ul class="choice choice1">
-                    <li></li>
-                </ul>
-                <ul class="choice choice1">
-                    <li></li>
-                </ul>
-                <ul class="choice choice1">
-                    <li></li>
-                </ul>
-                <ul class="choice choice1">
-                    <li></li>
-                </ul>
-                <ul class="choice choice1">
-                    <li></li>
-                </ul>
-            </div>
+            <ul class="choices">
+                <li class="choice">
+                    <div class="choiceDrop"></div>
+                    <span>1.</span>
+                    <div class="choiceTitle"></div>
+                </li>
+            </ul>
             <div class="clear"></div>
-        </div>
-        <div id="login">
-            <form id="loginForm" action="POST">
-                <fieldset>
-                    <label for="name">Name:</label>
-                    <input class="name login" type="text" name="name" />
-                    
-                    <br />
-                    
-                    <label for="position">Position:</label>
-                    <input class="position login" type="text" name="position" />
-                    
-                    <br />
-                    
-                    <label for="email">Email:</label>
-                    <input class="email login" type="text" name="email" />
-                </fieldset>
-                <button class="begin">Begin!</button>
-            </form>
         </div>
         <footer></footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
         <script src="js/jquery.validate.js"></script>
-        <script src="js/class.js"></script>
-        <script src="js/app.js"></script>
-        
         <script>
             (function($) {
                 $(window).load(function() {
                     
-                    var c = new Class(),
-                        app = new App();
+                    $('.video').on('dragstart', function(evt, ui) {
+                        
+                        var $this = $(this);
+                        
+                        var $parent = $this.parent('.videoContainer');
+                        
+                        $parent.addClass('empty');
+                        
+                        var tile = $this.find('.videoTile'),
+                            thumb = $this.find('.videoThumb');
+                            
+                        tile.css({
+                            width: '60px',
+                            height: '60px',
+                            top: evt.offsetY - 30 + 'px',
+                            left: evt.offsetX - 30 + 'px',
+                            opacity: 0
+                        });
+                        
+                        thumb.css({
+                            width: '60px',
+                            height: '60px',
+                            top: evt.offsetY - 30 + 'px',
+                            left: evt.offsetX - 30 + 'px',
+                            opacity: 1
+                        });
+                    });
                     
-                    $('#loginForm').validate({
-                        rules: {
-                            name: "required",
-                            position: "required",
-                            email: {
-                                required: true,
-                                email: true
-                            }
+                    $('.video').on('dragstop', function(evt, ui) {
+                        var $this = $(this);
+                        
+                        var $parent = $this.parent('.videoContainer');
+                        
+                        $parent.removeClass('empty');
+                        
+                        var tile = $this.find('.videoTile'),
+                            thumb = $this.find('.videoThumb');
+                            
+                        tile.css({
+                            width: '160px',
+                            height: '160px',
+                            top: '0px',
+                            left: '0px',
+                            opacity: 1
+                        });
+                        
+                        thumb.css({
+                            width: '160px',
+                            height: '160px',
+                            top: '0px',
+                            left: '0px',
+                            opacity: 0
+                        });
+                    });
+                    
+                    $('.video').draggable({
+                        revert: function(evt, ui) {
+                            $(this).data('uiDraggable').originalPosition = {
+                                top: 0,
+                                left: 0,
+                            };
+                            return !evt;
                         },
-                        messages: {
-                            name: "Please enter your name",
-                            position: "Please enter your current position",
-                            email: "Please enter a valid email address"
+                        drag: function(evt, ui) {
+                            
                         }
                     });
                     
-                    $('.choice').sortable({
-                        connectWith: '.removed, .choice',
-                        placeholder: "ui-state-highlight"
-                    });
-                    
-                    $('.video').sortable({
-                        connectWith: '.choice',
-                        placeholder: "ui-state-highlight",
-                        remove: function(evt, ui) {
-                            
-                            // generate unique class
-                            var c = app.makeId();
-                            // add the class to sender and item
-                            $(this).addClass(c);
-//                            $(ui.item).addClass(c);
-                            ui.item.addClass(c);
-//                            $(this).addClass('removed');
+                    $( ".choiceDrop" ).droppable({
+                        drop: function( event, ui ) {
+                            $( this )
+                            .addClass( "ui-state-highlight" )
+                            .html( "Dropped!" );
                         },
-                        receive: function(evt, ui) {
-                    
-                            // get the item class and check $(this) for class
-                            var c = ui.item.attr('class');
-                            if($(this).hasClass(c)) {
-                                // allow
-                            } else {
-                                alert('not allowed');
-                            }
-                            // if we have a match, allow
-                            // if not, send the item back
-                            
-                            
-//                            $(this).removeClass('removed');
+                        out: function(evt, ui) {
+                            $( this )
+                            .removeClass( "ui-state-highlight" )
+                            .html( "" );
                         }
                     });
-                    
                 });
             })(jQuery);
         </script>

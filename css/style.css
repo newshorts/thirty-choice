@@ -14,53 +14,6 @@ div {
     margin: 0 auto;
 }
 
-.videos {
-    width: 800px;
-    position: relative;
-    float: left;
-}
-
-.video {
-    width: 160px;
-    height: 160px;
-    margin: 10px;
-    float: left;
-    border: 2px solid #fbfbfb;
-    z-index: 10;
-}
-
-.video:hover {
-    border: 2px solid #ccc;
-}
-
-.video li img {
-    width: 160px;
-}
-
-.choices {
-    width: 300px;
-    max-height: 500px;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-
-.choice {
-    width: 300px;
-    height: 75px;
-    background-color: #888;
-    margin: 10px 0;
-}
-
-.choice li {
-    display: block;
-    width: 60px;
-    height: 60px;
-    border: 2px dashed #444;
-}
-
 .clear {
     clear: both;
 }
