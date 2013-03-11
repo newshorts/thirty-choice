@@ -124,7 +124,7 @@ BLOCK;
                 $h = $lb[$i]['title'];
                 $block = composeGalleryBlock($i, $image_arr, $h);
             } else {
-                $url = $lb[$i];
+                $url = $lb[$i]['video'];
                 $h = $lb[$i]['title'];
                 $block = composeVimeoBlock($i, $url, $h);
             }
