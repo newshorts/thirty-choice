@@ -64,7 +64,7 @@
             '../images/path/to/images.jpg'
         )),
         52 => 'http://player.vimeo.com/video/61385215?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff',
-    )
+    );
 ?>
 <!-- 
     Author: Mike Newell © 2012
@@ -113,8 +113,30 @@ and open the template in the editor.
                                 return $randomString;
                             }
                             
-                            for($i = 1; $i <= 52; $i++) {
+                            function composeGalleryBlock($i, $image_arr) {
+                                $id = genId(7);
                                 
+                                $length = count($image_arr);
+                                
+                                $str = '';
+                                
+                                for($x = 0; $x < $length; $x++) {
+                                    $str .= '<a class="videoLink fancybox" rel="gallery'.$i .'" href="'.$image_arr[$x].'"></a>\r\n';
+                                }
+                                
+                                $block = <<<BLOCK
+                            <div class="videoContainer" id="$id">
+                                <div class="video" data-key="$id">
+                                    <img class="videoThumb" src="../images/40x40/$i.jpg" />
+                                    <img class="videoTile" src="../images/150x150/$i.jpg" />
+                                    $str
+                                </div>
+                            </div>
+BLOCK;
+                                return $block;
+                            }
+                            
+                            function composeVimeoBlock($i, $url) {
                                 $id = genId(7);
                                 
                                 $block = <<<BLOCK
@@ -122,13 +144,32 @@ and open the template in the editor.
                                 <div class="video" data-key="$id">
                                     <img class="videoThumb" src="../images/40x40/$i.jpg" />
                                     <img class="videoTile" src="../images/150x150/$i.jpg" />
-                                    <a class="videoLink fancybox-media" href="http://player.vimeo.com/video/61393506?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff"></a>
+                                    <a class="videoLink fancybox-media" href="$url"></a>
                                 </div>
                             </div>
 BLOCK;
-                                
-                                echo $block;
+                                return $block;
                             }
+                            
+                            function outputBlock($lb) {
+                                
+                                $length = count($lb);
+                                
+                                for($i = 1; $i <= 52; $i++) {
+
+                                    if(is_array($lb[$i])) {
+                                        $image_arr = $lb[$i];
+                                        $block = composeGalleryBlock($i, $image_arr);
+                                    } else {
+                                        $url = $lb[$i];
+                                        $block = composeVimeoBlock($i, $url);
+                                    }
+
+                                    echo $block;
+                                }
+                            }
+                            
+                            outputBlock($lightboxArr);
                             
                             ?>
                             
