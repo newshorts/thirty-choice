@@ -97,8 +97,8 @@ BLOCK;
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
-        <script src="js/cufon.js"></script>
-        <script src="js/berthold.js"></script>
+        <script src="../js/cufon.js"></script>
+        <script src="../js/berthold.js"></script>
         <script>
             (function($) {
                 $(window).load(function() {
@@ -109,6 +109,12 @@ BLOCK;
                         var $this = $(this);
                         
                         if(!ui.helper.data('dropped')) {
+                            
+//                            if($this.parent().hasClass('choiceDrop')) {
+//                                var parentID = $this.data('key');
+//                                var elem = $this.detach();               
+//                                $('#' + parentID).html(elem);
+//                            }
                             
                             var $parent = $this.parent('.videoContainer');
 
@@ -142,13 +148,19 @@ BLOCK;
                         
                         if(!ui.helper.data('dropped')) {
                             
+//                            if($this.parent().hasClass('choiceDrop')) {
+//                                var parentID = $this.data('key');
+//                                var elem = $this.detach();               
+//                                $('#' + parentID).html(elem);
+//                            }
+                            
                             var $parent = $this.parent('.videoContainer');
 
                             $parent.removeClass('empty');
 
                             var tile = $this.find('.videoTile'),
                                 thumb = $this.find('.videoThumb');
-                                
+
                             tile.css({
                                 width: '150px',
                                 height: '150px',
@@ -160,11 +172,12 @@ BLOCK;
                                 height: '150px',
                                 opacity: 0
                             });
-                            
+
                             $this.css({
                                 width: '150px',
                                 height: '150px'
                             });
+                            
                         } else {
                             var o = $(ui.helper.data('dropElem')).offset();
                             $(this).offset(o);
@@ -176,15 +189,21 @@ BLOCK;
                         
                         // this is a neat little trick to get anything other than a drop to revert
                         revert: function(evt, ui) {
+                            
                             $(this).data('uiDraggable').originalPosition = {
                                 top: 0,
                                 left: 0,
                                 'z-index': 20
                             };
                             
-//                            $(this).data('uiDraggable').css({
-//                                'z-index': 20
-//                            });
+                            if($(this).parent().hasClass('choiceDrop') && !evt) {
+                                var o = $(this).parent('.choiceDrop').offset();
+                                var parentID = $(this).data('key');
+                                var elem = $(this).detach();               
+                                $('#' + parentID).html(elem);
+                                
+                                $(this).data('uiDraggable').currentPosition = o;
+                            }
                             
                             return !evt;
                         },
@@ -206,11 +225,19 @@ BLOCK;
                             ui.draggable.data('dropped', true);
                             ui.draggable.data('dropElem', this);
                             
+                            var elem = ui.draggable.detach();                            
+                            $(this).html(elem);
+
                             $(this).droppable('option', 'accept', ui.draggable);
                         },
                         out: function(evt, ui) {
                             ui.draggable.data('dropped', false);
                             ui.draggable.data('dropElem', null);
+                            
+                            // find the original parent of the item
+//                            var p = ui.draggable.data('key');
+//                            var elem = ui.draggable.detach();                            
+//                            $('#' + p).html(elem);
                             
                             $(this).droppable('option', 'accept', '.video');
                         }
