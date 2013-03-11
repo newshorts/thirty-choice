@@ -3,11 +3,11 @@
         1 => 'http://player.vimeo.com/video/61393506?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff',
         2 => 'http://player.vimeo.com/video/61393505?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff',
         3 => 'http://player.vimeo.com/video/61393507?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff',
-        4 => array('images' => array(
+        4 => array(
             '../images/path/to/images.jpg',
             '../images/path/to/images.jpg',
             '../images/path/to/images.jpg'
-        )),
+        ),
         5 => 'http://player.vimeo.com/video/61393323?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff',
         6 => 'http://player.vimeo.com/video/61393321?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff',
         7 => 'http://player.vimeo.com/video/61393320?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff',
@@ -45,11 +45,11 @@
         39 => 'http://player.vimeo.com/video/61391138?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff',
         40 => 'http://player.vimeo.com/video/61391136?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff',
         41 => 'http://player.vimeo.com/video/61392867?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff',
-        42 => array('images' => array(
+        42 => array(
             '../images/path/to/images.jpg',
             '../images/path/to/images.jpg',
             '../images/path/to/images.jpg'
-        )),
+        ),
         43 => 'http://player.vimeo.com/video/61385504?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff',
         44 => 'http://player.vimeo.com/video/61394273?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff',
         45 => 'http://player.vimeo.com/video/61385498?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff',
@@ -58,11 +58,11 @@
         48 => 'http://player.vimeo.com/video/61385218?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff',
         49 => 'http://player.vimeo.com/video/61392868?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff',
         50 => 'http://player.vimeo.com/video/61385217?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff',
-        51 => array('images' => array(
+        51 => array(
             '../images/path/to/images.jpg',
             '../images/path/to/images.jpg',
             '../images/path/to/images.jpg'
-        )),
+        ),
         52 => 'http://player.vimeo.com/video/61385215?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff',
     );
 ?>
@@ -121,7 +121,7 @@ and open the template in the editor.
                                 $str = '';
                                 
                                 for($x = 0; $x < $length; $x++) {
-                                    $str .= '<a class="videoLink fancybox" rel="gallery'.$i .'" href="'.$image_arr[$x].'"></a>\r\n';
+                                    $str .= '<a class="videoLink fancybox" rel="gallery'.$i .'" href="'.$image_arr[$x].'"></a>';
                                 }
                                 
                                 $block = <<<BLOCK
