@@ -30,24 +30,36 @@ and open the template in the editor.
                     <header><h1>Help Select 10 for 30</h1></header>
                     <article>
                         <div class="videos">
-                            <div class="videoContainer">
-                                <div class="video">
-                                    <img class="videoThumb" src="../images/40x40/1.jpg" />
-                                    <img class="videoTile" src="../images/150x150/1.jpg" />
+                            
+                            <?php
+                            
+                            function genId($length = 10) {
+                                $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                                $randomString = '';
+                                for ($i = 0; $i < $length; $i++) {
+                                    $randomString .= $characters[rand(0, strlen($characters) - 1)];
+                                }
+                                return $randomString;
+                            }
+                            
+                            for($i = 1; $i <= 52; $i++) {
+                                
+                                $id = genId(7);
+                                
+                                $block = <<<BLOCK
+                            <div class="videoContainer" id="$id">
+                                <div class="video" data-key="$id">
+                                    <img class="videoThumb" src="../images/40x40/$i.jpg" />
+                                    <img class="videoTile" src="../images/150x150/$i.jpg" />
                                 </div>
                             </div>
-                            <div class="videoContainer">
-                                <div class="video">
-                                    <img class="videoThumb" src="../images/40x40/2.jpg" />
-                                    <img class="videoTile" src="../images/150x150/2.jpg" />
-                                </div>
-                            </div>
-                            <div class="videoContainer">
-                                <div class="video">
-                                    <img class="videoThumb" src="../images/40x40/3.jpg" />
-                                    <img class="videoTile" src="../images/150x150/3.jpg" />
-                                </div>
-                            </div>
+BLOCK;
+                                
+                                echo $block;
+                            }
+                            
+                            ?>
+                            
                             <div class="clear"></div>
                         </div>
                         <ul class="choices">
@@ -85,6 +97,8 @@ and open the template in the editor.
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+        <script src="js/cufon.js"></script>
+        <script src="js/berthold.js"></script>
         <script>
             (function($) {
                 $(window).load(function() {
@@ -104,20 +118,20 @@ and open the template in the editor.
                                 thumb = $this.find('.videoThumb');
                                 
                             tile.css({
-                                width: '60px',
-                                height: '60px',
+                                width: '40px',
+                                height: '40px',
                                 opacity: 0
                             });
 
                             thumb.css({
-                                width: '60px',
-                                height: '60px',
+                                width: '40px',
+                                height: '40px',
                                 opacity: 1
                             });
                             
                             $this.css({
-                                width: '60px',
-                                height: '60px',
+                                width: '40px',
+                                height: '40px',
                             });
                         }
                     });
@@ -136,20 +150,20 @@ and open the template in the editor.
                                 thumb = $this.find('.videoThumb');
                                 
                             tile.css({
-                                width: '160px',
-                                height: '160px',
+                                width: '150px',
+                                height: '150px',
                                 opacity: 1
                             });
 
                             thumb.css({
-                                width: '160px',
-                                height: '160px',
+                                width: '150px',
+                                height: '150px',
                                 opacity: 0
                             });
                             
                             $this.css({
-                                width: '160px',
-                                height: '160px'
+                                width: '150px',
+                                height: '150px'
                             });
                         } else {
                             var o = $(ui.helper.data('dropElem')).offset();
@@ -165,7 +179,13 @@ and open the template in the editor.
                             $(this).data('uiDraggable').originalPosition = {
                                 top: 0,
                                 left: 0,
+                                'z-index': 20
                             };
+                            
+//                            $(this).data('uiDraggable').css({
+//                                'z-index': 20
+//                            });
+                            
                             return !evt;
                         },
                         drag: function(evt, ui) {
@@ -196,15 +216,7 @@ and open the template in the editor.
                         }
                     });
                     
-                    /**
-                     *  TODO In order to make this list sortable I'm gonna have
-                     *  to figure out how to .detach() the draggable from the 
-                     *  container, insert it into the choiceDrop and then if it
-                     *  gets remove, figure out how to get it to revert to its
-                     *  original container...the last part is the part i'm 
-                     *  having trouble with.
-                     */
-//                    $('.choices').sortable();
+                    Cufon.replace('h1, p, h2');
                     
                 });
             })(jQuery);

@@ -9,10 +9,10 @@
 }
 
 .videoContainer {
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
     position: relative;
-    margin: 10px;
+    margin: 6px;
     float: left;
     
     border: 2px solid white;
@@ -23,14 +23,24 @@
     border: 2px solid #ccc;
 }
 
+/* first element in every row */
+.videoContainer:nth-child(4n - 3) {
+    margin-left: 0;
+}
+
+/* last element in every row */
+.videoContainer:nth-child(4n) {
+    margin-right: 0;
+}
+
 .empty {
     border: 2px dashed #666;
     background-color: #888;
 }
 
 .video {
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
     position: relative;
     top:0;
     left: 0;
@@ -84,8 +94,8 @@
 .choiceDrop {
     position: relative;
     float: left;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     border: 2px dashed #777;
     background-color: #ccc;
 }
