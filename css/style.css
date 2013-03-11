@@ -112,6 +112,7 @@ section form {
     padding: 20px;
     background-color: #efeded;
     margin-top: 57px;
+    font-size: 12px;
 }
 
 form h2 {
@@ -137,11 +138,45 @@ form input {
 #submit {
     width: 95px;
     color: white;
-/*    height: 35px;*/
     background-color: #8d8f93;
     display: inline-block;
     float: right;
     padding: 4px 0;
     margin: 14px 0 0 0;
     
+}
+
+form label {
+    display: inline-block;
+    margin: 6px 0;
+}
+
+form input.radio {
+    width: 26px;
+    color: #e1e1e1;
+}
+
+form span.radio {
+    display: inline-block;
+    position: relative;
+    top: -3px;
+}
+
+.inputParent {
+    position: relative;
+}
+
+label.error {
+    color: #ed1c24;
+    font-size: 10px;
+    width: 112px;
+    margin-left: 10px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+
+
+.inputRadioParent label.error {
+    width: 307px;
 }

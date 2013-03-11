@@ -235,6 +235,14 @@ and open the template in the editor.
                                 <div class="choiceTitle"></div>
                                 <div class="clear"></div>
                             </li>
+<!--                            
+                            NOTE: THIS WILL KILL THE PAGE FIND ANOTHER PLACE FOR FORM
+                            <li>
+                                <form method="post" name="choicesForm" class="choicesForm">
+                                    <label for="comments">Comments:</label>
+                                    <textarea 
+                                </form>
+                            </li>-->
                         </ul>
                         <div class="clear"></div>
                     </article>
@@ -265,13 +273,16 @@ and open the template in the editor.
         
         <script src="../js/cufon.js"></script>
         <script src="../js/berthold.js"></script>
+        <script src="../js/jquery.cookie.js"></script>
         <script src="../js/class.js"></script>
+        <script src="../js/app.js"></script>
         <script src="../js/choices.js"></script>
         <script>
             (function($) {
                 $(window).load(function() {
                     
-                    var c = new Choices();
+                    var app = new App('.choicesForm'),
+                        c = new Choices();
                     
                     Cufon.replace('h1, p, h2');
                     
@@ -307,6 +318,8 @@ and open the template in the editor.
                             /*margin: -2150px 0 0 667px;*/
                         }
                     });
+                    
+                    console.dir(app.readCookie('GSP_vote_data'));
                     
                 });
             })(jQuery);
