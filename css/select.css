@@ -33,11 +33,6 @@
     margin-right: 0;
 }
 
-.empty {
-    border: 2px dashed #666;
-    background-color: #888;
-}
-
 .video {
     width: 150px;
     height: 150px;
@@ -86,20 +81,33 @@
 .choices {
     position: fixed;
     display: block;
-    width: 300px;
+    width: 168px;
     top: 15px;
     right: 15px;
+    padding: 5px;
     z-index: 10;
+    background-color: #e3e3e3;
+}
+
+.choices h2 {
+    font-size: 11px;
+    color: #ed1c24;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 4px auto;
 }
 
 .choice {
     position: relative;
     display: block;
-    width: 300px;
-    height: 75px;
-    background-color: #fbfbfb;
-    margin: 15px 0;
+    width: 158px;
+    /*height: 42px;*/
+    padding: 4px 0;
+    border-bottom: 1px solid #b9b9b9;
+}
 
+.choice:last-child {
+    border-bottom: none;
 }
 
 .choiceDrop {
@@ -107,18 +115,22 @@
     float: left;
     width: 40px;
     height: 40px;
-    border: 2px dashed #777;
-    background-color: #ccc;
+/*    border: 2px dashed #777;
+    background-color: #ccc;*/
 }
-/*
-.choiceDrop .video {
-    top: 0;
-    left: 0;
-}*/
 
 .choice span {
     display: inline-block;
     float: left;
+    margin: 15px 0 0 15px;
+    color: #ed1c24;
+}
+
+.choiceTitle {
+    display: inline-block;
+    margin: 16px 0 0 10px;
+    width: 75px;
+    font-size: 13px;
 }
 
 /*

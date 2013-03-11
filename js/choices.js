@@ -111,7 +111,9 @@ var Choices = Class.extend({
                     var parentID = $(this).data('key');
                     var elem = $(this).detach();               
                     $('#' + parentID).html(elem);
-
+                    
+                    
+                    // TODO find out if this is working or not
                     $(this).data('uiDraggable').currentPosition = o;
                 }
 
@@ -146,12 +148,27 @@ var Choices = Class.extend({
 
                 var elem = ui.draggable.detach();                            
                 $(this).html(elem);
+                
+                $(this).removeClass('empty');
+                
+                var t = ui.draggable.data('heading');
+                $(this).siblings('.choiceTitle').text(t);
+                
+                // TODO figure out how to set an offset on the draggable dropped elem so it doesnt snapt to top left corner of choiceDrop
+//                ui.draggable.css({
+//                    top: '20px',
+//                    left: '20px'
+//                });
 
                 $(this).droppable('option', 'accept', ui.draggable);
             },
             out: function(evt, ui) {
                 ui.draggable.data('dropped', false);
                 ui.draggable.data('dropElem', null);
+                
+                $(this).addClass('empty');
+                
+                $(this).siblings('.choiceTitle').text('');
 
                 // find the original parent of the item
         //                            var p = ui.draggable.data('key');

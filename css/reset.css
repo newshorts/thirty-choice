@@ -50,3 +50,8 @@ table {
 .clear {
     clear: both;
 }
+
+.empty {
+    border: 2px dashed #666;
+    background-color: #efeded;
+}
