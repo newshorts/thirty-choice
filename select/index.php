@@ -290,6 +290,24 @@ and open the template in the editor.
                         }
                     });
                     
+                    $(window).scroll(function(){
+                        if  ($(window).scrollTop() >= 300){
+                            $('.choices').css({
+                                position: 'fixed',
+                                margin: '-2473px 0 0 667px'
+                            });
+                            /*margin: -2150px 0 0 667px;*/
+                        }
+                        
+                        if  ($(window).scrollTop() < 300){
+                            $('.choices').css({
+                                position: 'relative',
+                                margin: '-2150px -213px 0 0'
+                            });
+                            /*margin: -2150px 0 0 667px;*/
+                        }
+                    });
+                    
                 });
             })(jQuery);
         </script>
