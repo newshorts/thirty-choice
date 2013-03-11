@@ -62,7 +62,10 @@ body {
     width: 100%;
     background-color: #ed1c24;
     height: 12px;
+    border-top: none;
+    border-right: none;
     border-bottom: 1px solid #f4777c;
+    border-left: none;
     margin-top: 26px;
 }
 

@@ -178,71 +178,75 @@ and open the template in the editor.
                             <li class="choice">
                                 <div class="choiceDrop empty"></div>
                                 <span>1.</span>
-                                <div class="choiceTitle"></div>
+                                <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
                             <li class="choice">
                                 <div class="choiceDrop empty"></div>
                                 <span>2.</span>
-                                <div class="choiceTitle"></div>
+                                <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
                             <li class="choice">
                                 <div class="choiceDrop empty"></div>
                                 <span>3.</span>
-                                <div class="choiceTitle"></div>
+                                <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
                             <li class="choice">
                                 <div class="choiceDrop empty"></div>
                                 <span>4.</span>
-                                <div class="choiceTitle"></div>
+                                <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
                             <li class="choice">
                                 <div class="choiceDrop empty"></div>
                                 <span>5.</span>
-                                <div class="choiceTitle"></div>
+                                <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
                             <li class="choice">
                                 <div class="choiceDrop empty"></div>
                                 <span>6.</span>
-                                <div class="choiceTitle"></div>
+                                <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
                             <li class="choice">
                                 <div class="choiceDrop empty"></div>
                                 <span>7.</span>
-                                <div class="choiceTitle"></div>
+                                <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
                             <li class="choice">
                                 <div class="choiceDrop empty"></div>
                                 <span>8.</span>
-                                <div class="choiceTitle"></div>
+                                <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
                             <li class="choice">
                                 <div class="choiceDrop empty"></div>
                                 <span>9.</span>
-                                <div class="choiceTitle"></div>
+                                <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
                             <li class="choice">
                                 <div class="choiceDrop empty"></div>
                                 <span>10.</span>
-                                <div class="choiceTitle"></div>
+                                <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
 <!--                            
                             NOTE: THIS WILL KILL THE PAGE FIND ANOTHER PLACE FOR FORM
-                            <li>
+-->                            <li>
                                 <form method="post" name="choicesForm" class="choicesForm">
                                     <label for="comments">Comments:</label>
-                                    <textarea 
+                                    <br />
+                                    <textarea class="comments" rows="3" cols="10">
+                                        At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. 
+                                    </textarea>
+                                    
                                 </form>
-                            </li>-->
+                            </li>
                         </ul>
                         <div class="clear"></div>
                     </article>

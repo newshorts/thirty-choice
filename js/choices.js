@@ -148,11 +148,12 @@ var Choices = Class.extend({
 
                 var elem = ui.draggable.detach();                            
                 $(this).html(elem);
+                $(this).addClass('filled');
                 
                 $(this).removeClass('empty');
                 
                 var t = ui.draggable.data('heading');
-                $(this).siblings('.choiceTitle').text(t);
+                $(this).siblings('.choiceTitle').children('p').text(t);
                 
                 // TODO figure out how to set an offset on the draggable dropped elem so it doesnt snapt to top left corner of choiceDrop
 //                ui.draggable.css({
@@ -167,8 +168,9 @@ var Choices = Class.extend({
                 ui.draggable.data('dropElem', null);
                 
                 $(this).addClass('empty');
+                $(this).removeClass('filled');
                 
-                $(this).siblings('.choiceTitle').text('');
+                $(this).siblings('.choiceTitle').children('p').text('');
 
                 // find the original parent of the item
         //                            var p = ui.draggable.data('key');

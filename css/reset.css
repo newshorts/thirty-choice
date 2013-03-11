@@ -52,6 +52,6 @@ table {
 }
 
 .empty {
-    border: 2px dashed #666;
+    border: 1px dashed #999;
     background-color: #efeded;
 }
