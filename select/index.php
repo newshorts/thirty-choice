@@ -4,9 +4,9 @@
         2 => array('title' => 'Born a Donkey', 'video' => 'http://player.vimeo.com/video/61393505?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         3 => array('title' => 'What Are You Doing?', 'video' => 'http://player.vimeo.com/video/61393507?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         4 => array('title' => 'California Coastal Cleanup', 'images' => array(
-            '../images/path/to/images.jpg',
-            '../images/path/to/images.jpg',
-            '../images/path/to/images.jpg'
+            'http://farm8.staticflickr.com/7215/7354748342_5c13372784_o.jpg',
+            'http://farm8.staticflickr.com/7184/6883913997_be4ed87cc4_b.jpg',
+            'http://farm8.staticflickr.com/7041/6777068562_5574751fe8_b.jpg'
         )),
         5 => array('title' => 'Aaron Burr', 'video' => 'http://player.vimeo.com/video/61393323?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         6 => array('title' => 'Birthday', 'video' => 'http://player.vimeo.com/video/61393321?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
@@ -46,9 +46,7 @@
         40 => array('title' => 'Long Way Home', 'video' => 'http://player.vimeo.com/video/61391136?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         41 => array('title' => 'See What Develops', 'video' => 'http://player.vimeo.com/video/61392867?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         42 => array('title' => 'Kills Bugs Fast', 'images' => array(
-            '../images/path/to/images.jpg',
-            '../images/path/to/images.jpg',
-            '../images/path/to/images.jpg'
+            'http://farm4.staticflickr.com/3161/5836507805_1415f57eb5_o.jpg'
         )),
         43 => array('title' => 'Ron Stablehorn, Beer Ape', 'video' => 'http://player.vimeo.com/video/61385504?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         44 => array('title' => 'NextFest, Sky Dome', 'video' => 'http://player.vimeo.com/video/61394273?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
@@ -59,9 +57,9 @@
         49 => array('title' => 'Wedding', 'video' => 'http://player.vimeo.com/video/61392868?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         50 => array('title' => 'Now Network', 'video' => 'http://player.vimeo.com/video/61385217?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         51 => array('title' => 'Tattoo', 'images' => array(
-            '../images/path/to/images.jpg',
-            '../images/path/to/images.jpg',
-            '../images/path/to/images.jpg'
+            'http://l.yimg.com/g/images/spaceout.gif',
+            'http://l.yimg.com/g/images/spaceout.gif',
+            'http://farm4.staticflickr.com/3100/3179137510_d362684a88_z.jpg'
         )),
         52 => array('title' => 'Bus Stop Derby', 'video' => 'http://player.vimeo.com/video/61385215?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
     );
@@ -164,7 +162,7 @@ and open the template in the editor.
                 <section>
                     <header><h1>Start Voting</h1></header>
                     <article>
-                        <p>Click to video any of the campaigns. Drag your favorites into your Top 10 list on the right. You can re-order your ranking before you submit. There is space for “write-in” votes. <strong>Votes are due by 5 p.m. PDT, Friday, March 22.</strong></p>
+                        <p>Click a tile to view the video any of the campaigns. To vote, drag your favorites into your Top 10 list on the right. You can re-order your ranking before you submit. If you wish, there is space for “write-in” votes. <strong>Votes are due by 5 p.m. PDT, Friday, March 22.</strong></p>
                     </article>
                     <article>
                         <div class="videos">
@@ -305,6 +303,11 @@ and open the template in the editor.
                         }
                     });
                     
+                    $(".fancybox").fancybox({
+                        openEffect	: 'none',
+                        closeEffect	: 'none'
+                    });
+                    
                     $(window).scroll(function(){
                         if  ($(window).scrollTop() >= 300){
                             $('.choices').css({
@@ -327,40 +330,46 @@ and open the template in the editor.
                         
                         evt.preventDefault();
                         
-                        var contactData = app.readCookie('GSP_contact_data');
+                        var r = confirm("Are you sure you want to submit this ranked list?")
                         
-                        var choicesData = new Array();
-                        $('.choiceTitle').each(function(idx) {
-                            var p = $(this).find('p');
-                            var title = p.text();
-                            var key = idx + 1;
+                        if(r == true) {
+                            var contactData = app.readCookie('GSP_contact_data');
+
+                            var choicesData = new Array();
+                            $('.choiceTitle').each(function(idx) {
+                                var p = $(this).find('p');
+                                var title = p.text();
+                                var key = idx + 1;
+
+                                choicesData[key] = title;
+                            });
+
+                            var obj = {
+                                contact: contactData,
+                                choices: choicesData,
+                                comments: $('.comments').val()
+                            };
+
+                            var json = JSON.stringify(obj);
+
+                            $.cookie('GSP_vote_data', json, { expires: 7 });
+
+                            $.post("submit.php", { "data": json },
+                                function(data){
+                                    console.dir(data);
+
+                                    if(data.response) {
+                                        $.removeCookie('GSP_vote_data');
+                                        $.removeCookie('GSP_contact_data');
+                                        window.location = "http://agency.goodbysilverstein.com/30th/thanks";
+                                    } else {
+                                        alert('Unable to contact our servers right now, please try again later.')
+                                    }
+
+                                }, "json");
+                        }
+                        
                             
-                            choicesData[key] = title;
-                        });
-                        
-                        var obj = {
-                            contact: contactData,
-                            choices: choicesData,
-                            comments: $('.comments').val()
-                        };
-                        
-                        var json = JSON.stringify(obj);
-                        
-                        $.cookie('GSP_vote_data', json, { expires: 7 });
-                        
-                        $.post("submit.php", { "data": json },
-                            function(data){
-                                console.dir(data);
-                                
-                                if(data.response) {
-                                    $.removeCookie('GSP_vote_data');
-                                    $.removeCookie('GSP_contact_data');
-                                    window.location = "http://agency.goodbysilverstein.com/30th/thanks";
-                                } else {
-                                    alert('Unable to contact our servers right now, please try again later.')
-                                }
-                                    
-                            }, "json");
                         
                     });
                     
