@@ -323,7 +323,46 @@ and open the template in the editor.
                         }
                     });
                     
-                    console.dir(app.readCookie('GSP_vote_data'));
+                    $('#submit_select').on('click', function(evt) {
+                        
+                        evt.preventDefault();
+                        
+                        var contactData = app.readCookie('GSP_contact_data');
+                        
+                        var choicesData = new Array();
+                        $('.choiceTitle').each(function(idx) {
+                            var p = $(this).find('p');
+                            var title = p.text();
+                            var key = idx + 1;
+                            
+                            choicesData[key] = title;
+                        });
+                        
+                        var obj = {
+                            contact: contactData,
+                            choices: choicesData,
+                            comments: $('.comments').val()
+                        };
+                        
+                        var json = JSON.stringify(obj);
+                        
+                        $.cookie('GSP_vote_data', json, { expires: 7 });
+                        
+                        $.post("submit.php", { "data": json },
+                            function(data){
+                                console.dir(data);
+                                
+                                if(data.response) {
+                                    $.removeCookie('GSP_vote_data');
+                                    $.removeCookie('GSP_contact_data');
+                                    window.location = "http://agency.goodbysilverstein.com/30th/thanks";
+                                } else {
+                                    alert('Unable to contact our servers right now, please try again later.')
+                                }
+                                    
+                            }, "json");
+                        
+                    });
                     
                 });
             })(jQuery);

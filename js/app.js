@@ -19,7 +19,7 @@ var App = Class.extend({
         
         var json = JSON.stringify(data);
         
-        $.cookie('GSP_vote_data', json, { expires: 7 });
+        $.cookie('GSP_contact_data', json, { expires: 7 });
         
         window.location = "select";
     },
