@@ -4,9 +4,9 @@
         2 => array('title' => 'Born a Donkey', 'video' => 'http://player.vimeo.com/video/61393505?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         3 => array('title' => 'What Are You Doing?', 'video' => 'http://player.vimeo.com/video/61393507?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         4 => array('title' => 'California Coastal Cleanup', 'images' => array(
-            'http://farm8.staticflickr.com/7215/7354748342_5c13372784_o.jpg',
-            'http://farm8.staticflickr.com/7184/6883913997_be4ed87cc4_b.jpg',
-            'http://farm8.staticflickr.com/7041/6777068562_5574751fe8_b.jpg'
+            '../images/print_campaigns/4a_california_coastal_commission.jpg',
+            '../images/print_campaigns/4b_california_coastal_commission.jpg',
+            '../images/print_campaigns/4c_california_coastal_commission.jpg'
         )),
         5 => array('title' => 'Aaron Burr', 'video' => 'http://player.vimeo.com/video/61393323?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         6 => array('title' => 'Birthday', 'video' => 'http://player.vimeo.com/video/61393321?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
@@ -46,7 +46,7 @@
         40 => array('title' => 'Long Way Home', 'video' => 'http://player.vimeo.com/video/61391136?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         41 => array('title' => 'See What Develops', 'video' => 'http://player.vimeo.com/video/61392867?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         42 => array('title' => 'Kills Bugs Fast', 'images' => array(
-            'http://farm4.staticflickr.com/3161/5836507805_1415f57eb5_o.jpg'
+            '../images/print_campaigns/42_Porsche_Kills_Bugs_Fast.jpg'
         )),
         43 => array('title' => 'Ron Stablehorn, Beer Ape', 'video' => 'http://player.vimeo.com/video/61385504?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         44 => array('title' => 'NextFest, Sky Dome', 'video' => 'http://player.vimeo.com/video/61394273?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
@@ -57,9 +57,7 @@
         49 => array('title' => 'Wedding', 'video' => 'http://player.vimeo.com/video/61392868?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         50 => array('title' => 'Now Network', 'video' => 'http://player.vimeo.com/video/61385217?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         51 => array('title' => 'Tattoo', 'images' => array(
-            'http://l.yimg.com/g/images/spaceout.gif',
-            'http://l.yimg.com/g/images/spaceout.gif',
-            'http://farm4.staticflickr.com/3100/3179137510_d362684a88_z.jpg'
+            '../images/print_campaigns/51_NYer_Tattoo.jpg'
         )),
         52 => array('title' => 'Bus Stop Derby', 'video' => 'http://player.vimeo.com/video/61385215?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
     );
