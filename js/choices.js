@@ -121,8 +121,9 @@ var Choices = Class.extend({
             },
             drag: function(evt, ui) {
                 $(this).css({
-                    'z-index': 30
+                    "z-index": "30"
                 });
+                
             },
             cursorAt: {
                 left: 30,

@@ -174,61 +174,82 @@ and open the template in the editor.
                         <ul class="choices">
                             <h2>Top 10</h2>
                             <li class="choice">
-                                <div class="choiceDrop empty"></div>
+                                <!-- TODO added choiceDropContainer which doesn't seem to be working for z-indexes -->
+                                <div class="choiceDropContainer">
+                                    <div class="choiceDrop empty"></div>
+                                </div>
                                 <span>1.</span>
                                 <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
                             <li class="choice">
-                                <div class="choiceDrop empty"></div>
+                                <div class="choiceDropContainer">
+                                    <div class="choiceDrop empty"></div>
+                                </div>
                                 <span>2.</span>
                                 <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
                             <li class="choice">
-                                <div class="choiceDrop empty"></div>
+                                <div class="choiceDropContainer">
+                                    <div class="choiceDrop empty"></div>
+                                </div>
                                 <span>3.</span>
                                 <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
                             <li class="choice">
-                                <div class="choiceDrop empty"></div>
+                                <div class="choiceDropContainer">
+                                    <div class="choiceDrop empty"></div>
+                                </div>
                                 <span>4.</span>
                                 <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
                             <li class="choice">
-                                <div class="choiceDrop empty"></div>
+                                <div class="choiceDropContainer">
+                                    <div class="choiceDrop empty"></div>
+                                </div>
                                 <span>5.</span>
                                 <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
                             <li class="choice">
-                                <div class="choiceDrop empty"></div>
+                                <div class="choiceDropContainer">
+                                    <div class="choiceDrop empty"></div>
+                                </div>
                                 <span>6.</span>
                                 <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
                             <li class="choice">
-                                <div class="choiceDrop empty"></div>
+                                <div class="choiceDropContainer">
+                                    <div class="choiceDrop empty"></div>
+                                </div>
                                 <span>7.</span>
                                 <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
                             <li class="choice">
-                                <div class="choiceDrop empty"></div>
+                                <div class="choiceDropContainer">
+                                    <div class="choiceDrop empty"></div>
+                                </div>
                                 <span>8.</span>
                                 <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
                             <li class="choice">
-                                <div class="choiceDrop empty"></div>
+                                <div class="choiceDropContainer">
+                                    <div class="choiceDrop empty"></div>
+                                </div>
                                 <span>9.</span>
                                 <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
                             <li class="choice">
-                                <div class="choiceDrop empty"></div>
+                                <div class="choiceDropContainer">
+                                    <div class="choiceDrop empty"></div>
+                                </div>
                                 <span>10.</span>
                                 <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>

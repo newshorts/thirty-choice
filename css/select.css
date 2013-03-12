@@ -5,7 +5,7 @@
 .videos {
     width: 666px;
     position: relative;
-    z-index: 20;
+    /*z-index: 20;*/
 }
 
 .videoContainer {
@@ -45,6 +45,7 @@
     position: relative;
     top:0;
     left: 0;
+    z-index: 10;
 }
 
 .videoLink {
@@ -90,7 +91,7 @@
     float: right;   
     margin: -2150px -213px 0 0;
     padding: 5px;
-    z-index: 10;
+    /*z-index: 10;*/
     /*background-color: #e3e3e3;*/
 }
 
@@ -115,9 +116,19 @@
     border-bottom: none;
 }
 
+/*
+    TODO still fucking with z-index to make my elements pop over others
+*/
+
+.choiceDropContainer {
+    float: left;
+    width: 42px;
+    height: 42px
+}
+
 .choiceDrop {
     position: relative;
-    float: left;
+    /*float: left;*/
     width: 40px;
     height: 40px;
     
@@ -151,6 +162,13 @@
     display: table-cell;
     /*margin: 0 0 0 15px;*/
 /*    color: #ed1c24;*/
+}
+
+.choiceDrop,
+.choiceTitle p,
+.choice span {
+    z-index: 10;
+    position: relative;
 }
 
 /*
