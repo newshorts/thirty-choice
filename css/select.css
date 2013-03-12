@@ -105,7 +105,7 @@
 .choice {
     position: relative;
     display: block;
-    width: 158px;
+    width: 164px;
     /*height: 42px;*/
     padding: 4px 0;
     border-bottom: 1px solid #b9b9b9;
@@ -162,4 +162,32 @@
     height: 38px;
     background: url(../images/nav-bg.png) 0 0 scroll no-repeat;
     background-position: 0 -36px ;
+}
+
+.choicesForm { 
+	background: none; 
+	margin: 0px 0px;
+	padding-left: 0px; 	
+}
+
+.choicesForm textarea {
+	color: #9b9da1;
+	height: 64px; 
+	resize: none; 
+	width: 159px;
+ 
+}
+
+#submit_select {
+	/* 	width: 95px; */
+    background-color: #8d8f93;
+    padding: 4px 10px;
+    margin: 14px 0 0 43px;
+    width: 103px; 
+}
+
+#submit_select a {
+	color: white;
+	font-size: 10px; 
+	text-decoration: none;
 }

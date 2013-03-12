@@ -241,10 +241,10 @@ and open the template in the editor.
                                 <form method="post" name="choicesForm" class="choicesForm">
                                     <label for="comments">Comments:</label>
                                     <br />
-                                    <textarea class="comments" rows="3" cols="10">
-                                        At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. 
-                                    </textarea>
-                                    
+                                    <textarea class="comments" rows="3" cols="10" placeholder="Feel free to write-in another campaign or share any thoughts about any of your votes." value=""></textarea>
+                                    <div id="submit_select" >
+                                    	<a href="#" target="blank">Submit Your Rankings</a>
+                                    </div>
                                 </form>
                             </li>
                         </ul>
