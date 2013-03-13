@@ -139,7 +139,7 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html>
     <head>
-        <title>GSP 30th Anniversary</title>
+        <title>GSP 30th Anniversary Top 10</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="../css/reset.css" />
         <link rel="stylesheet" type="text/css" href="../css/style.css" />
@@ -158,9 +158,13 @@ and open the template in the editor.
                     <div class="nav"></div>
                 </header>
                 <section>
-                    <header><h1>Start Voting</h1></header>
+                    <header><h1>How to Vote</h1></header>
                     <article>
-                        <p>Click a tile to view the video any of the campaigns. To vote, drag your favorites into your Top 10 list on the right. You can re-order your ranking before you submit. If you wish, there is space for “write-in” votes. <strong>Votes are due by 5 p.m. PDT, Friday, March 22.</strong></p>
+                        <p>1. CLICK a tile to view the work</p>
+                        <p>2. To vote, DRAG your favorites to the Top 10 list on the right</p>
+                        <p>3 .You can re-order before you submit</p>
+                        <p>4. There is space below for "write-in" votes.</p> 
+                        <p>5.<strong> Votes are due by 5 p.m. PDT, Friday, March 22.</strong></p>
                     </article>
                     <article>
                         <div class="videos">
@@ -170,7 +174,7 @@ and open the template in the editor.
                             <div class="clear"></div>
                         </div>
                         <ul class="choices">
-                            <h2>Top 10</h2>
+                            <h2>Your Top 10</h2>
                             <li class="choice">
                                 <!-- TODO added choiceDropContainer which doesn't seem to be working for z-indexes -->
                                 <div class="choiceDropContainer">

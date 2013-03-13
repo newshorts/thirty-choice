@@ -18,7 +18,7 @@ html, body, #wrap {
 
 body {
     font-family: arial, sans-serif;
-    color: #9b9da1;
+    color: #000000;
 
     /* fallback 58595b 3b3c3d */
     /*background-color: #3b3c3d;*/
@@ -105,10 +105,16 @@ section article {
 }
 
 section article p {
-    font-size: 12px;
+    font-size: 14px;
     margin: 10px 0;
-    line-height: 13px;
+    line-height: 16px;
 }
+
+/*
+section article p span { 
+	font-weight: bold; 
+}
+*/
 
 section form {
     width: 318px;
