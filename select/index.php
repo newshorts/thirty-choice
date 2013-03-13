@@ -160,9 +160,9 @@ and open the template in the editor.
                 <section>
                     <header><h1>How to Vote</h1></header>
                     <article>
-                        <p>1. CLICK a tile to view the work</p>
-                        <p>2. To vote, DRAG your favorites to the Top 10 list on the right</p>
-                        <p>3 .You can re-order before you submit</p>
+                        <p>1. CLICK a tile to view the work.</p>
+                        <p>2. To vote, DRAG your favorites to the Top 10 list on the right.</p>
+                        <p>3. You can re-order before you submit.</p>
                         <p>4. There is space below for "write-in" votes.</p> 
                         <p>5.<strong> Votes are due by 5 p.m. PDT, Friday, March 22.</strong></p>
                     </article>
