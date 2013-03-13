@@ -154,7 +154,7 @@ var Choices = Class.extend({
                 $(this).removeClass('empty');
                 
                 var t = ui.draggable.data('heading');
-                $(this).siblings('.choiceTitle').children('p').text(t);
+                $(this).parent('.choiceDropContainer').siblings('.choiceTitle').children('p').text(t);
                 
                 // TODO figure out how to set an offset on the draggable dropped elem so it doesnt snapt to top left corner of choiceDrop
 //                ui.draggable.css({
