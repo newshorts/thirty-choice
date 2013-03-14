@@ -162,10 +162,10 @@ and open the template in the editor.
                     <header><h1>How to Vote</h1></header>
                     <article>
                         <p>1. CLICK a tile to view the work.</p>
-                        <p>2. To vote, DRAG your favorites to the Top 10 list on the right.</p>
+                        <p>2. To vote, DRAG your favorites to Your Top 10 list on the right.</p>
                         <p>3. You can re-order before you submit.</p>
                         <p>4. There is space below for "write-in" votes.</p> 
-                        <p>5. <span class="strong">Votes are due by 5 p.m. PDT, Monday, March 25.</span></p>
+                        <p><span class="strong_red">Votes are due by 5:00 p.m. PDT, Monday, March 25.</span></p>
                     </article>
                     <article>
                         <div class="videos">

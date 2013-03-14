@@ -116,6 +116,10 @@ section article p span {
 	font-weight: bold; 
 }
 
+.strong_red {
+	color: #fc0707;
+}
+
 section form {
     width: 338px;
     padding: 20px;
