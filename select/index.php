@@ -144,6 +144,7 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="../css/reset.css" />
         <link rel="stylesheet" type="text/css" href="../css/style.css" />
         <link rel="stylesheet" type="text/css" href="../css/select.css" />
+        <link href="http://agency.goodbysilverstein.com/30th/favicon.ico" rel="shortcut icon">
         <style>
             
         </style>
