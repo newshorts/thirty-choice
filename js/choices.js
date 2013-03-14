@@ -170,8 +170,8 @@ var Choices = Class.extend({
                 
                 $(this).addClass('empty');
                 $(this).removeClass('filled');
-                
-                $(this).siblings('.choiceTitle').children('p').text('');
+                $(this).parent('.choiceDropContainer').siblings('.choiceTitle').children('p').text('');
+/*                 console.log($(this)); */
 
                 // find the original parent of the item
         //                            var p = ui.draggable.data('key');
