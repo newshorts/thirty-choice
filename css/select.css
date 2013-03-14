@@ -191,7 +191,7 @@
 
 .choicesForm textarea {
 	color: #000000;
-	height: 64px; 
+	height: 54px; 
 	resize: none; 
 	width: 159px;
  
@@ -201,7 +201,7 @@
 	/* 	width: 95px; */
     background-color: #8d8f93;
     padding: 4px 10px;
-    margin: 14px 0 0 43px;
+    margin: 2px 0 0 43px;
     width: 103px; 
 }
 
