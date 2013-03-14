@@ -153,7 +153,7 @@ and open the template in the editor.
             <hr class="redBar" />
             <div id="container">
                 <header>
-                    <a href="#"><img src="../images/logo.png" /></a>
+                    <a href="http://agency.goodbysilverstein.com/30th/"><img src="../images/logo.png" /></a>
                     <hr />
                     <div class="nav"></div>
                 </header>
@@ -164,7 +164,7 @@ and open the template in the editor.
                         <p>2. To vote, DRAG your favorites to the Top 10 list on the right.</p>
                         <p>3. You can re-order before you submit.</p>
                         <p>4. There is space below for "write-in" votes.</p> 
-                        <p>5.<strong> Votes are due by 5 p.m. PDT, Friday, March 22.</strong></p>
+                        <p>5. <span class="strong">Votes are due by 5 p.m. PDT, Monday, March 25.</span></p>
                     </article>
                     <article>
                         <div class="videos">
@@ -174,7 +174,7 @@ and open the template in the editor.
                             <div class="clear"></div>
                         </div>
                         <ul class="choices">
-                            <h2>Your Top 10</h2>
+                            <h2><strong>Your Top 10</strong></h2>
                             <li class="choice">
                                 <!-- TODO added choiceDropContainer which doesn't seem to be working for z-indexes -->
                                 <div class="choiceDropContainer">
@@ -309,7 +309,7 @@ and open the template in the editor.
                     var app = new App('.choicesForm'),
                         c = new Choices();
                     
-                    Cufon.replace('h1, p, h2');
+/*                     Cufon.replace('h1, p, h2'); */
                     
                     $('.fancybox-media')
                     .attr('rel', 'media-gallery')
@@ -335,7 +335,7 @@ and open the template in the editor.
                         if  ($(window).scrollTop() >= 300){
                             $('.choices').css({
                                 position: 'fixed',
-                                margin: '-2473px 0 0 667px'
+                                margin: '-2533px 0 0 667px'
                             });
                             /*margin: -2150px 0 0 667px;*/
                         }
@@ -343,7 +343,7 @@ and open the template in the editor.
                         if  ($(window).scrollTop() < 300){
                             $('.choices').css({
                                 position: 'relative',
-                                margin: '-2150px -213px 0 0'
+                                margin: '-2135px -213px 0 0'
                             });
                             /*margin: -2150px 0 0 667px;*/
                         }

@@ -89,7 +89,7 @@
     position: relative;
     width: 168px;
     float: right;   
-    margin: -2150px -213px 0 0;
+    margin: -2135px -213px 0 0;
     padding: 5px;
     /*z-index: 10;*/
     /*background-color: #e3e3e3;*/
@@ -98,9 +98,9 @@
 .choices h2 {
     font-size: 13px;
     color: #ed1c24;
-/*     font-weight: bold;  */
+    font-weight: 800; 
     text-transform: uppercase;
-    text-align: center;
+/*     text-align: center; */
     margin: 4px auto;
 }
 
