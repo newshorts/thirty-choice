@@ -22,7 +22,7 @@
         
         $str .= "\n\r\tComments: ".$data['comments']."\n\r";
         
-        $to = "mike_newell@gspsf.com";
+        $to = "meagan_phillips@gspsf.com";
         $subject = "VOTE: From GSP 30th";
         $txt = $str;
         $headers = "From: thevotingmachine@goodbysilverstein.com" . "\r\n" .
