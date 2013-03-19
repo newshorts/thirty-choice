@@ -1,6 +1,6 @@
 <?php
     $lightboxArr = array(
-        1 => array('title' => 'Weird without Beer', 'video' => 'http://player.vimeo.com/video/62123282?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),    
+        1 => array('title' => 'Weird Without Beer', 'video' => 'http://player.vimeo.com/video/62123282?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),    
         2 => array('title' => 'Budweiser Lizards', 'video' => 'http://player.vimeo.com/video/61393506?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         3 => array('title' => 'Born a Donkey', 'video' => 'http://player.vimeo.com/video/61393505?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         4 => array('title' => 'What Are You Doing?', 'video' => 'http://player.vimeo.com/video/61393507?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
@@ -13,14 +13,14 @@
         11 => array('title' => '2012', 'video' => 'http://player.vimeo.com/video/62123148?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         12 => array('title' => 'Game Time App', 'video' => 'http://player.vimeo.com/video/61393145?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         13 => array('title' => 'Sonic Launch', 'video' => 'http://player.vimeo.com/video/61393142?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
-        14 => array('title' => 'Polygraph, Birthday, Cows', 'video' => 'http://player.vimeo.com/video/61393139?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
+        14 => array('title' => 'Fresh Mex', 'video' => 'http://player.vimeo.com/video/61393139?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         15 => array('title' => 'Rabbit', 'video' => 'http://player.vimeo.com/video/61393136?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         16 => array('title' => 'Save Moolah, Money', 'video' => 'http://player.vimeo.com/video/61393007?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         17 => array('title' => 'The Slowskys', 'video' => 'http://player.vimeo.com/video/61393006?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         18 => array('title' => 'Free Grand Slam', 'video' => 'http://player.vimeo.com/video/61393005?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         19 => array('title' => 'Crash the Super Bowl', 'video' => 'http://player.vimeo.com/video/61393004?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         20 => array('title' => 'Hotel 626', 'video' => 'http://player.vimeo.com/video/61393001?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
-        21 => array('title' => 'Out the Wazoo, Money...', 'video' => 'http://player.vimeo.com/video/61392326?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
+        21 => array('title' => 'It&apos;s Your Money', 'video' => 'http://player.vimeo.com/video/61392326?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         22 => array('title' => 'Toy Boat', 'video' => 'http://player.vimeo.com/video/61392324?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         23 => array('title' => 'Cop', 'video' => 'http://player.vimeo.com/video/61392323?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         24 => array('title' => 'Say No to Plumping', 'video' => 'http://player.vimeo.com/video/61392322?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
@@ -33,10 +33,10 @@
         27 => array('title' => 'Astronaut', 'video' => 'http://player.vimeo.com/video/62124087?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),        
         28 => array('title' => 'Francois (Picture Book)', 'video' => 'http://player.vimeo.com/video/61391863?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
 /*         29 => array('title' => 'Jay Z', 'video' => 'http://player.vimeo.com/video/61391862?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'), */
-        29 => array('title' => 'The Computer is Personal Again', 'video' => '"http://player.vimeo.com/video/62125260?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
+        29 => array('title' => 'The Computer is Personal Again', 'video' => 'http://player.vimeo.com/video/62125260?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         30 => array('title' => 'I Want To Say', 'video' => 'http://player.vimeo.com/video/61391859?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         31 => array('title' => 'UFO', 'video' => 'http://player.vimeo.com/video/61391398?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
-        32 => array('title' => 'Assurance', 'video' => 'http://player.vimeo.com/video/61391397?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
+        32 => array('title' => 'Angry Bosses, Think About It, Assurance', 'video' => 'http://player.vimeo.com/video/61391397?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         33 => array('title' => 'Practically/Amazing', 'images' => array(
             '../images/print_campaigns/33_ISUZU_1.jpg',
             '../images/print_campaigns/33_ISUZU_2.jpg'
@@ -121,7 +121,7 @@ BLOCK;
 
         $length = count($lb);
 
-        for($i = 1; $i <= 52; $i++) {
+        for($i = 1; $i <= $length; $i++) {
 
             if(isset($lb[$i]['images'])) {
                 $image_arr = $lb[$i]['images'];
@@ -173,7 +173,7 @@ and open the template in the editor.
                         <p>2. To vote, DRAG your favorites to Your Top 10 list on the right.</p>
                         <p>3. You can re-order before you submit.</p>
                         <p>4. There is space below for "write-in" votes.</p> 
-                        <p><span class="strong_red">Votes are due by 5:00 p.m. PDT, Monday, March 25.</span></p>
+                        <p><span class="strong_red">Votes are due by 5:00 p.m. PDT, Tuesday, March 26.</span></p>
                     </article>
                     <article>
                         <div class="videos">
@@ -344,7 +344,7 @@ and open the template in the editor.
                         if  ($(window).scrollTop() >= 300){
                             $('.choices').css({
                                 position: 'fixed',
-                                margin: '-2533px 0 0 667px'
+                                margin: '-2713px 0 0 667px'
                             });
                             /*margin: -2150px 0 0 667px;*/
                         }
@@ -352,7 +352,7 @@ and open the template in the editor.
                         if  ($(window).scrollTop() < 300){
                             $('.choices').css({
                                 position: 'relative',
-                                margin: '-2135px -213px 0 0'
+                                margin: '-2303px -213px 0 0'
                             });
                             /*margin: -2150px 0 0 667px;*/
                         }
