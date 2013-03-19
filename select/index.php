@@ -26,7 +26,9 @@
         24 => array('title' => 'Say No to Plumping', 'video' => 'http://player.vimeo.com/video/61392322?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         25 => array('title' => 'Honey Bees', 'video' => 'http://player.vimeo.com/video/61391864?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         26 => array('title' => 'Five', 'images' => array(
-            '../images/print_campaigns/42_Porsche_Kills_Bugs_Fast.jpg'
+            '../images/print_campaigns/26_HD_Five_1.jpg',
+            '../images/print_campaigns/26_HD_Five_2.jpg',
+            '../images/print_campaigns/26_HD_Five_3.jpg'
         )), 
         27 => array('title' => 'Astronaut', 'video' => 'http://player.vimeo.com/video/62124087?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),        
         28 => array('title' => 'Francois (Picture Book)', 'video' => 'http://player.vimeo.com/video/61391863?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
@@ -36,7 +38,8 @@
         31 => array('title' => 'UFO', 'video' => 'http://player.vimeo.com/video/61391398?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         32 => array('title' => 'Assurance', 'video' => 'http://player.vimeo.com/video/61391397?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         33 => array('title' => 'Practically/Amazing', 'images' => array(
-            '../images/print_campaigns/42_Porsche_Kills_Bugs_Fast.jpg'
+            '../images/print_campaigns/33_ISUZU_1.jpg',
+            '../images/print_campaigns/33_ISUZU_2.jpg'
         )),
         34 => array('title' => 'Ivan Cobenk', 'video' => 'http://player.vimeo.com/video/61391396?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         35 => array('title' => 'Mill Valley Film Festival', 'video' => 'http://player.vimeo.com/video/62126748?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
