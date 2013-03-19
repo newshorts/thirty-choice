@@ -249,7 +249,7 @@ and open the template in the editor.
                                 <div class="choiceTitle"><p></p></div>
                                 <div class="clear"></div>
                             </li>
-                            <li class="choice">
+                            <li class="choice" id="ten">
                                 <div class="choiceDropContainer">
                                     <div class="choiceDrop empty"></div>
                                 </div>
@@ -263,7 +263,7 @@ and open the template in the editor.
                                 <form method="post" name="choicesForm" class="choicesForm">
                                     <label for="comments">Comments:</label>
                                     <br />
-                                    <textarea class="comments" rows="3" cols="10" placeholder="Feel free to write-in another campaign or share any thoughts about any of your votes." value=""></textarea>
+                                    <textarea class="comments" rows="3" cols="10" placeholder="Feel free to write-in another campaign or share thoughts on any of your votes." value=""></textarea>
                                     <div id="submit_select" >
                                     	<a href="#" target="blank">Submit Your Rankings</a>
                                     </div>
@@ -351,7 +351,7 @@ and open the template in the editor.
                     });
                     
                     $('#submit_select').on('click', function(evt) {
-                        
+                        console.log('here');
                         evt.preventDefault();
                         
                         var r = confirm("Are you sure you want to submit this ranked list?")
@@ -367,7 +367,6 @@ and open the template in the editor.
 
                                 choicesData[key] = title;
                             });
-
                             var obj = {
                                 contact: contactData,
                                 choices: choicesData,

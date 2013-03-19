@@ -113,6 +113,11 @@
     border-bottom: 1px solid #b9b9b9;
 }
 
+#ten {
+	border-bottom: none;
+	margin-bottom: 6px; 
+}
+
 .choice:last-child {
     border-bottom: none;
 }
@@ -191,7 +196,7 @@
 
 .choicesForm textarea {
 	color: #000000;
-	height: 54px; 
+	height: 40px; 
 	resize: none; 
 	width: 159px;
  
