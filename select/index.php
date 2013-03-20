@@ -36,7 +36,7 @@
         29 => array('title' => 'The Computer is Personal Again', 'video' => 'http://player.vimeo.com/video/62125260?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         30 => array('title' => 'I Want To Say', 'video' => 'http://player.vimeo.com/video/61391859?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         31 => array('title' => 'UFO', 'video' => 'http://player.vimeo.com/video/61391398?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
-        32 => array('title' => 'Angry Bosses, Think About It, Assurance', 'video' => 'http://player.vimeo.com/video/61391397?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
+        32 => array('title' => 'Think About It', 'video' => 'http://player.vimeo.com/video/61391397?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         33 => array('title' => 'Practically/Amazing', 'images' => array(
             '../images/print_campaigns/33_ISUZU_1.jpg',
             '../images/print_campaigns/33_ISUZU_2.jpg'

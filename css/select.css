@@ -166,6 +166,8 @@
     /*display: table-cell;*/
     vertical-align: middle;
     display: table-cell;
+    font-family: 'Helvetica';
+    font-size: 12px; 
     /*margin: 0 0 0 15px;*/
 /*    color: #ed1c24;*/
 }
