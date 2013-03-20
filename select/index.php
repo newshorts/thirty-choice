@@ -173,7 +173,7 @@ and open the template in the editor.
                         <p>2. To vote, DRAG your favorites to Your Top 10 list on the right.</p>
                         <p>3. You can re-order before you submit.</p>
                         <p>4. There is space below for "write-in" votes.</p> 
-                        <p><span class="strong_red">Votes are due by 5:00 p.m. PDT, Tuesday, March 26.</span></p>
+                        <p><span class="strong_red">Votes are due by 5:00 p.m. PDT, Wednesday, March 27.</span></p>
                     </article>
                     <article>
                         <div class="videos">
