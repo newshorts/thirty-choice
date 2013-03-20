@@ -9,7 +9,7 @@
         7 => array('title' => 'Heaven', 'video' => 'http://player.vimeo.com/video/61393319?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         8 => array('title' => 'Peanut Butter Dog', 'video' => 'http://player.vimeo.com/video/62123149?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         9 => array('title' => 'Scented Bus Stops', 'video' => 'http://player.vimeo.com/video/61393320?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
-        10 => array('title' => 'gettheglass.com', 'video' => 'http://player.vimeo.com/video/61393318?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
+        10 => array('title' => 'Get the Glass', 'video' => 'http://player.vimeo.com/video/61393318?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         11 => array('title' => '2012', 'video' => 'http://player.vimeo.com/video/62123148?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         12 => array('title' => 'Game Time App', 'video' => 'http://player.vimeo.com/video/61393145?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         13 => array('title' => 'Sonic Launch', 'video' => 'http://player.vimeo.com/video/61393142?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
@@ -37,7 +37,7 @@
         30 => array('title' => 'I Want To Say', 'video' => 'http://player.vimeo.com/video/61391859?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         31 => array('title' => 'UFO', 'video' => 'http://player.vimeo.com/video/61391398?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         32 => array('title' => 'Think About It', 'video' => 'http://player.vimeo.com/video/61391397?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
-        33 => array('title' => 'Practically/Amazing', 'images' => array(
+        33 => array('title' => 'Practically/<br />Amazing', 'images' => array(
             '../images/print_campaigns/33_ISUZU_1.jpg',
             '../images/print_campaigns/33_ISUZU_2.jpg'
         )),
@@ -47,7 +47,7 @@
         37 => array('title' => 'Taxi', 'video' => 'http://player.vimeo.com/video/61391393?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         38 => array('title' => 'There Can Only Be One', 'video' => 'http://player.vimeo.com/video/61391144?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         39 => array('title' => 'I Will Have Two Fillings', 'video' => 'http://player.vimeo.com/video/61392869?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
-        40 => array('title' => 'Skateboarders', 'video' => 'http://player.vimeo.com/video/61391143?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
+        40 => array('title' => 'Skate-<br />boarders', 'video' => 'http://player.vimeo.com/video/61391143?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         41 => array('title' => 'Wario Land – Shake It', 'video' => 'http://player.vimeo.com/video/61391139?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         42 => array('title' => 'Fantasies', 'video' => 'http://player.vimeo.com/video/62127500?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
         43 => array('title' => 'Neighbors', 'video' => 'http://player.vimeo.com/video/61391138?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'),
